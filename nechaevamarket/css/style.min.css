@@ -216,6 +216,13 @@ h1 {
   letter-spacing: -0.06em;
 }
 
+h2 {
+  font-family: YesevaOne-Regular;
+  font-size: 52px;
+  line-height: 1.1em;
+  letter-spacing: -0.06em;
+}
+
 .product-card-container .price-list .product-discount {
   font-family: Primary-Medium;
   font-size: 13px;
@@ -516,6 +523,14 @@ main {
 h1 {
   color: #413E37;
   margin-bottom: 20px;
+}
+
+h2 {
+  color: #413E37;
+  margin-bottom: 20px;
+}
+h2 span {
+  color: rgba(65, 62, 55, 0.5);
 }
 
 #main-page_front {
