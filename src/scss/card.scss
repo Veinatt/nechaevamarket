@@ -1,0 +1,73 @@
+.product-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 320/375;
+        border-radius: 4px;
+
+    }
+
+    .price-list {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+
+        .product-price {
+            color: $clr-green;
+            font-family: $f-b;
+            font-size: 24px;
+            line-height: 1.1em;
+        }
+
+        .product-old-price {
+            color: $clr-black;
+            @extend %text_body3;
+            text-decoration: line-through;
+            opacity: .3;
+        }
+
+        .product-discount {
+            color: #fff;
+            @extend %text_des;
+            padding: 2px 4px;
+            background-color: $clr-black;
+            border-radius: 2px;
+        }
+    }
+
+    .name-shop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .product-name {
+            @extend %text_body1;
+            color: $clr-main;
+        }
+
+        .product-shop {
+            height: 52px;
+            width: 52px;
+            position: relative;
+            background-color: transparent;
+            border: 1px solid $clr-greytext2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            &:hover {
+                border: 1px solid $clr-mainlight;
+            }
+            &:before {
+                content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_3530_221)"><path d="M11.9113 9.40599e-05C11.5212 0.0300941 11.1313 0.240094 10.8913 0.570094L3.87125 9.00009H0.03125V12.0001H3.03125V22.9801C3.03125 23.5201 3.51125 24.0001 4.05125 24.0001H19.9812C20.5212 24.0001 21.0012 23.5201 21.0012 22.9801V12.0001H24.0012V9.00009H20.1612C19.3512 8.01009 12.9912 0.420094 12.9312 0.360094C12.6012 0.0900941 12.2712 -0.0599059 11.9113 -0.0299059V9.40599e-05ZM12.0013 3.84009L16.3212 9.00009H7.68125L12.0013 3.84009ZM7.50125 15.0001C8.34125 15.0001 9.00125 15.6601 9.00125 16.5001V19.5001C9.00125 20.3401 8.34125 21.0001 7.50125 21.0001C6.66125 21.0001 6.00125 20.3401 6.00125 19.5001V16.5001C6.00125 15.6601 6.66125 15.0001 7.50125 15.0001ZM16.5012 15.0001C17.3412 15.0001 18.0012 15.6601 18.0012 16.5001V19.5001C18.0012 20.3401 17.3412 21.0001 16.5012 21.0001C15.6612 21.0001 15.0012 20.3401 15.0012 19.5001V16.5001C15.0012 15.6601 15.6612 15.0001 16.5012 15.0001Z" fill="%23413E37" /></g><defs><clipPath id="clip0_3530_221"><rect width="24" height="24" fill="white" /></clipPath></defs></svg>');
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
