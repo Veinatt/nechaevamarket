@@ -1,0 +1,31 @@
+#breadcrumbs {
+    margin-top: 110px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .bc-link {
+        @extend %text_body1;
+        color: rgba($color: $clr-black, $alpha: .4);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &::after {
+            content: url('data:image/svg+xml,<svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.15674" cy="3" r="2.15674" fill="%23242424" fill-opacity="0.4"/></svg>');
+            margin-top: -8px;
+        }
+
+        &.bc-active {
+
+            color: $clr-black;
+
+            &::after {
+                content: none;
+                width: 5px;
+                height: 6px;
+            }
+        }
+    }
+}
