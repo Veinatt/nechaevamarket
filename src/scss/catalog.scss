@@ -1,0 +1,222 @@
+.catalog-cont {
+
+    display: flex;
+    gap: 30px;
+
+
+    .filters-cont {
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .filter-block {
+            width: 100%;
+            background-color: $clr-grey;
+            padding: 20px;
+            .accordion {
+                width: 100%;
+                font-family: $f-b;
+                font-size: 20px;
+                color: $clr-black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                @extend %transition_default;
+
+                &:after {
+                    @extend %transition_default;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    height: 24px;
+                    width: 24px;
+                    transform: translateY(-50%);
+                    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.06034 8.77849C4.98078 8.7033 4.88719 8.64453 4.78492 8.60552C4.68264 8.5665 4.57369 8.54802 4.46427 8.55111C4.35485 8.55421 4.24711 8.57882 4.14721 8.62356C4.0473 8.66829 3.95719 8.73226 3.882 8.81182C3.80682 8.89138 3.74805 8.98497 3.70903 9.08724C3.67002 9.18951 3.65153 9.29847 3.65463 9.40789C3.65773 9.51731 3.68234 9.62504 3.72707 9.72495C3.77181 9.82485 3.83578 9.91497 3.91534 9.99015L11.4153 17.0735C11.5701 17.2198 11.7749 17.3013 11.9878 17.3013C12.2008 17.3013 12.4056 17.2198 12.5603 17.0735L20.0612 9.99015C20.1425 9.91547 20.2081 9.82537 20.2543 9.7251C20.3005 9.62482 20.3263 9.51637 20.3302 9.40605C20.3341 9.29572 20.3161 9.18571 20.2771 9.08241C20.2382 8.97911 20.1791 8.88459 20.1033 8.80432C20.0275 8.72405 19.9365 8.65965 19.8356 8.61484C19.7347 8.57004 19.6259 8.54573 19.5156 8.54332C19.4052 8.54092 19.2954 8.56047 19.1927 8.60084C19.0899 8.64121 18.9962 8.70159 18.917 8.77848L11.9878 15.3218L5.06034 8.77849Z" fill="%23242424"/></svg>');
+                }
+
+                &.active::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            @extend %transition_default;
+
+            &:has(.custom-checkbox) {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        .custom-checkbox {
+            display: block;
+            position: relative;
+            padding-left: 28px;
+            cursor: pointer;
+            user-select: none;
+            @extend %text_body1;
+            color: $clr-black;
+            line-height: 1em;
+
+
+            &:first-child {
+                margin-top: 20px;
+            }
+
+            & input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+            }
+
+            .checkmark {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-10px);
+                left: 0;
+                height: 20px;
+                width: 20px;
+                background-color: #E1DBCC;
+                border-radius: 2px;
+                @extend %transition_default;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.16602 10.8335L7.49935 14.1668L15.8327 5.8335" stroke="%23242424" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &:hover input~.checkmark {
+                background-color: color-mix(in srgb, #E1DBCC 95%, #000 5%);
+            }
+
+            & input:checked~.checkmark:after {
+                display: block;
+            }
+        }
+
+        .custom-price {
+            
+            .price-input {
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                gap: 12px;
+                margin-bottom: 25px;
+            }
+
+            .price-input .field {
+                display: flex;
+                width: calc(50% - 6px);
+                height: 45px;
+                align-items: center;
+                justify-content: center;
+                border-radius: 2px;
+                border: 1px solid $clr-darkgrey;
+                padding: 0 5px;
+            }
+
+            .field input {
+                width: 100%;
+                height: 100%;
+                outline: none;
+                text-align: center;
+                background-color: transparent;
+            }
+
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
+            .price-input .separator {
+                width: 130px;
+                display: flex;
+                font-size: 19px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .slider {
+                height: 5px;
+                position: relative;
+                background: $clr-darkgrey;
+                border-radius: 4px;
+            }
+
+            .slider .progress {
+                height: 100%;
+                left: 25%;
+                right: 25%;
+                position: absolute;
+                border-radius: 5px;
+                background: $clr-black;
+            }
+
+            .range-input {
+                position: relative;
+                padding-bottom: 10px;
+            }
+
+            .range-input input {
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                top: -5px;
+                background: none;
+                pointer-events: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                height: 17px;
+                width: 17px;
+                border-radius: 50%;
+                background: $clr-black;
+                pointer-events: auto;
+                -webkit-appearance: none;
+                cursor: pointer;
+            }
+
+            input[type="range"]::-moz-range-thumb {
+                height: 17px;
+                width: 17px;
+                border: none;
+                border-radius: 50%;
+                background: $clr-black;
+                pointer-events: auto;
+                -moz-appearance: none;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .cards-cont {
+        width: calc(100% - 340px);
+
+        .cards-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .product-card {
+                width: calc((100% - 40px) / 3);
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
