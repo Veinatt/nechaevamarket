@@ -1,6 +1,6 @@
 <div class="container">
     @@include('breadcrumbs.html')
-    <section>
+    <section id="catalog-page">
         <h2>Каталог</h2>
         <div class="catalog-cont">
             <div class="filters-cont">
@@ -58,11 +58,15 @@
                     @@include('card.html')
                     @@include('card.html')
                 </div>
-                <div class="more-block">
-
-                </div>
+                <button class="more-block main-btn outline-btn">
+                    Показать ещё
+                </button>
                 <div class="pagination-block">
-
+                    <button class="main-btn outline-btn active">1</button>
+                    <button class="main-btn outline-btn">2</button>
+                    <button class="main-btn outline-btn">3</button>
+                    <button class="main-btn outline-btn">4</button>
+                    <button class="main-btn outline-btn">5</button>
                 </div>
             </div>
         </div>

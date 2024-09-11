@@ -156,6 +156,7 @@ body {
 	min-height: 100svh;
 	letter-spacing: -.06em;
 	color: $clr-main;
+	@extend %text_body1;
 }
 
 
@@ -183,6 +184,9 @@ body {
 		line-height: 1em;
 
 		&:hover {
+			border: 1px solid $clr-mainlight;
+		}
+		&.active {
 			border: 1px solid $clr-mainlight;
 		}
 	}
@@ -228,3 +232,4 @@ h2 {
 @import "breadcrumbs.scss";
 @import "main.scss";
 @import "catalog.scss";
+@import "product.scss";
