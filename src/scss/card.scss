@@ -12,33 +12,7 @@
 
     }
 
-    .price-list {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-
-        .product-price {
-            color: $clr-green;
-            font-family: $f-b;
-            font-size: 24px;
-            line-height: 1.1em;
-        }
-
-        .product-old-price {
-            color: $clr-black;
-            @extend %text_body3;
-            text-decoration: line-through;
-            opacity: .3;
-        }
-
-        .product-discount {
-            color: #fff;
-            @extend %text_des;
-            padding: 2px 4px;
-            background-color: $clr-black;
-            border-radius: 2px;
-        }
-    }
+    
 
     .name-shop {
         display: flex;

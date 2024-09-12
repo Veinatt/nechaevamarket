@@ -20,6 +20,24 @@
     &>div {
         width: calc(50% - 25px);
     }
+    #pp_gallery {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        a {
+            width: calc((100% - 60px) / 6);
+            aspect-ratio: 1;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
     .pp_info {
         display: flex;
         flex-direction: column;
@@ -31,27 +49,20 @@
             margin-top: -10px;
             margin-bottom: 0;
         }
+        .main-btn {
+            margin-top: auto;
+        }
         .product-article {
             color: $clr-greytext;
         }
         .price-list {
-            display: flex;
-            align-items: center;
-            gap: 7px;
     
             .product-price {
-                color: $clr-green;
-                font-family: $f-b;
                 font-size: 36px;
-                line-height: 1.1em;
             }
     
             .product-old-price {
-                color: $clr-black;
-                @extend %text_body3;
                 font-size: 24px;
-                text-decoration: line-through;
-                opacity: .3;
             }
     
             .product-discount {
@@ -59,8 +70,6 @@
                 @extend %text_des;
                 padding: 2px 5px;
                 font-size: 24px;
-                background-color: $clr-black;
-                border-radius: 2px;
             }
         }
         .product-desc{
