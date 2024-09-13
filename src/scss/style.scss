@@ -232,10 +232,15 @@ h2 {
 	gap: 7px;
 
 	.product-price {
-		color: $clr-green;
+		color: $clr-black;
 		font-family: $f-b;
 		font-size: 24px;
 		line-height: 1.1em;
+	}
+
+	&:has(.product-old-price) .product-price {
+
+		color: $clr-green;
 	}
 
 	.product-old-price {

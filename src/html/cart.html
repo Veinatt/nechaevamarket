@@ -2,5 +2,26 @@
     @@include('breadcrumbs.html')
     <section id="cart-page">
         <h2>Корзина</h2>
+        <div class="cp_cont">
+            <div class="cp_cards">
+                @@include('card-in-cart.html')
+                @@include('card-in-cart.html')
+                @@include('card-in-cart.html')
+                @@include('card-in-cart.html')
+                @@include('card-in-cart.html')
+            </div>
+            <div class="cp_prices">
+                <div class="cp_prices-sticky">
+                    <div class="cp_price-cont">
+                        <div class="cp_price">
+                            <div class="cp_price-title">Сумма заказа</div>
+                            <div class="cp_price-num">1 020 000₽</div>
+                        </div>
+                        <div class="cp_discount">Скидка: 5000₽</div>
+                    </div>
+                    <button class="main-btn">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
     </section>
 </div>

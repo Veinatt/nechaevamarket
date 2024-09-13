@@ -153,7 +153,7 @@ rangeInput.forEach((input) => {
   input.addEventListener("input", (e) => {
     let minVal = parseInt(rangeInput[0].value),
       maxVal = parseInt(rangeInput[1].value);
-    
+
     if (maxVal - minVal < priceGap) {
       if (e.target.className === "range-min") {
         rangeInput[0].value = maxVal - priceGap;
@@ -169,7 +169,31 @@ rangeInput.forEach((input) => {
   });
 });
 
+document.querySelectorAll(".product-counter").forEach(product_counter => {
+  let counter = 0;
 
+  const counterValue = product_counter.querySelector('.counter-value');
+  const incrementBtn = product_counter.querySelector('.increment-btn');
+  const decrementBtn = product_counter.querySelector('.decrement-btn');
+
+  // To increment the value of counter
+  incrementBtn.addEventListener('click', () => {
+    counter++;
+    counterValue.innerHTML = counter;
+    if (counter > 1) {
+      decrementBtn.disabled = false
+    }
+  });
+
+  // To decrement the value of counter
+  decrementBtn.addEventListener('click', () => {
+      counter--;
+      counterValue.innerHTML = counter;
+      if (counter == 1) {
+        decrementBtn.disabled = true
+      }
+  });
+});
 
 
 // var swiper = new Swiper('.partners-swiper', {
