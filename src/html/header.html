@@ -13,7 +13,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.18/fullpage.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Nechaeva</title>
@@ -41,31 +41,114 @@
                 </a>
             </div>
             <div class="right-menu">
-                <div class="cart">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_3475_14)">
-                            <path
-                                d="M9.92539 -0.000165759C9.60039 0.0248342 9.27539 0.199834 9.07539 0.474834L3.22539 7.49983H0.0253906V9.99983H2.52539V19.1498C2.52539 19.5998 2.92539 19.9998 3.37539 19.9998H16.6504C17.1004 19.9998 17.5004 19.5998 17.5004 19.1498V9.99983H20.0004V7.49983H16.8004C16.1254 6.67483 10.8254 0.349834 10.7754 0.299834C10.5004 0.0748342 10.2254 -0.0501658 9.92539 -0.0251658V-0.000165759ZM10.0004 3.19983L13.6004 7.49983H6.40039L10.0004 3.19983ZM6.25039 12.4998C6.95039 12.4998 7.50039 13.0498 7.50039 13.7498V16.2498C7.50039 16.9498 6.95039 17.4998 6.25039 17.4998C5.55039 17.4998 5.00039 16.9498 5.00039 16.2498V13.7498C5.00039 13.0498 5.55039 12.4998 6.25039 12.4998ZM13.7504 12.4998C14.4504 12.4998 15.0004 13.0498 15.0004 13.7498V16.2498C15.0004 16.9498 14.4504 17.4998 13.7504 17.4998C13.0504 17.4998 12.5004 16.9498 12.5004 16.2498V13.7498C12.5004 13.0498 13.0504 12.4998 13.7504 12.4998Z"
-                                fill="#413E37" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_3475_14">
-                                <rect width="20" height="20" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <div>0</div>
-                </div>
-                <div class="log-in">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M9.16602 5.83333L7.99935 7L10.166 9.16667H1.66602V10.8333H10.166L7.99935 13L9.16602 14.1667L13.3327 10L9.16602 5.83333ZM16.666 15.8333H9.99935V17.5H16.666C17.5827 17.5 18.3327 16.75 18.3327 15.8333V4.16667C18.3327 3.25 17.5827 2.5 16.666 2.5H9.99935V4.16667H16.666V15.8333Z"
-                            fill="#413E37" />
-                    </svg>
-
-                    <div>Войти</div>
+                <a href="#" class="cart">0</a>
+                <button type="button" class="log-in" data-bs-toggle="modal" data-bs-target="#LoginForm">Войти</button>
+            </div>
+        </div>
+    </header>
+    <div class="modal fade default-modal" id="LoginForm" tabindex="-1" aria-labelledby="LoginLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2>Вход</h2>
+                    <div class="switchmodal">
+                        Нет аккаунта?
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#RegForm">Регистрация</button>
+                    </div>
+                    <form action="">
+                        <div class="default-form-field">
+                            <label for="LoginMail">E-mail</label>
+                            <input type="email" placeholder="example@gmail.com" id="LoginMail">
+                        </div>
+                        <div class="default-form-field">
+                            <label for="LoginPass">Пароль</label>
+                            <input type="password" placeholder="Введите пароль" id="LoginPass">
+                        </div>
+                        <button type="submit" class="main-btn">Войти</button>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="modal fade default-modal" id="RegForm" tabindex="-1" aria-labelledby="RegLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2>Вход</h2>
+                    <div class="switchmodal">
+                        Есть аккаунт?
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#LoginForm">Войти</button>
+                    </div>
+                    <form action="">
+                        <div class="default-form-field">
+                            <label for="RegMail">E-mail</label>
+                            <input type="email" placeholder="example@gmail.com" id=RegMail">
+                        </div>
+                        <div class="default-form-field">
+                            <label for=RegPass">Пароль</label>
+                            <input type="password" placeholder="Введите пароль" id=RegPass">
+                        </div>
+                        <div class="default-form-field">
+                            <label for=RegPassAgain">Повторите пароль</label>
+                            <input type="password" placeholder="Повторите пароль" id="RegPassAgain">
+                        </div>
+                        <button type="button" class="main-btn" data-bs-toggle="modal" data-bs-target="#CheckForm">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+    <div class="modal fade default-modal" id="CheckForm" tabindex="-1" aria-labelledby="CheckLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2>Введите
+                        проверочный код</h2>
+                    <div class="switchmodal">
+                        Мы отправили его на ваш e-mail <div id="userEmail">nechae *** **yandex.ru</div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#LoginForm">Изменить</button>
+                    </div>
+                    <form action="">
+                        <div class="default-form-field">
+                            <label for="RegMail">E-mail</label>
+                            <input type="email" placeholder="example@gmail.com" id=RegMail">
+                        </div>
+                        <div class="default-form-field">
+                            <label for=RegPass">Пароль</label>
+                            <input type="password" placeholder="Введите пароль" id=RegPass">
+                        </div>
+                        <div class="default-form-field">
+                            <label for=RegPassAgain">Повторите пароль</label>
+                            <input type="password" placeholder="Повторите пароль" id="RegPassAgain">
+                        </div>
+                        <button type="submit" class="main-btn">Готово</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade default-modal" id="TimeoutForm" tabindex="-1" aria-labelledby="TimeoutLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+            <div class="modal-content">
+                <div class="container">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h2>Узнать какие камни <br> подходят именно <br>
+                        под Ваш знак зодиака</h2>
+                    <form action="">
+                        <div class="default-form-field">
+                            <label for="TimeoutNumber">Номер телефона или Telegram</label>
+                            <input type="text" placeholder="+7(999) 999-99-99 или @login" id=TimeoutNumber">
+                        </div>
+                        <div class="default-form-field">
+                            <label for=TimeoutDate">Дата рождения</label>
+                            <input type="date" placeholder="11.11.2000" id=TimeoutDate">
+                        </div>
+                        <button type="submit" class="main-btn">Узнать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

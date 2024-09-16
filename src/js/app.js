@@ -31,7 +31,11 @@ ready(function () {
   } else {
     document.querySelector('header').classList.remove('active');
   }
-
+  // const TimeoutModal = new bootstrap.Modal('#TimeoutForm', {
+  // })
+  // setTimeout(() => {
+  //   TimeoutModal.show()
+  // }, 300);
 
 });
 

@@ -19,9 +19,47 @@
                         </div>
                         <div class="cp_discount">Скидка: 5000₽</div>
                     </div>
-                    <button class="main-btn">Оформить заказ</button>
+                    <button type="button" class="main-btn" data-bs-toggle="modal" data-bs-target="#CartForm">Оформить
+                        заказ</button>
                 </div>
             </div>
         </div>
     </section>
+</div>
+<div class="modal fade default-modal" id="CartForm" tabindex="-1" aria-labelledby="CartLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl modal-fullscreen-md-down">
+        <div class="modal-content">
+            <div class="container">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h2>Оформление заказа</h2>
+                <form action="">
+                    <div class="default-form-field">
+                        <label for="CartName">Ваше имя</label>
+                        <input type="text" placeholder="Кирилл" id="CartName">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartDate">Дата рождения</label>
+                        <input type="date" placeholder="11.11.2000" id="CartDate">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartNumber">Номер телефона</label>
+                        <input type="tel" placeholder="+7 (999) 999-99-99" id="CartNumber">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartTime">Время рождения</label>
+                        <input type="time" placeholder="15:00" id="CartTime">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartTelegram">Ваш логин в Telegram</label>
+                        <input type="text" placeholder="@telegram" id="CartTelegram">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartPlace">Место рождения</label>
+                        <input type="text" placeholder="Москва" id="CartPlace">
+                    </div>
+                    <button type="submit" class="main-btn">Оформить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

@@ -154,6 +154,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100svh;
+	width: 100%;
 	letter-spacing: -.06em;
 	color: $clr-main;
 	@extend %text_body1;
@@ -168,7 +169,7 @@ body {
 	@extend %transition_default;
 	padding: .85em .9em;
 	border-radius: .2em;
-	line-height: 1em;
+	line-height: 1.4em;
 	position: relative;
 	display: inline-block;
 
@@ -259,10 +260,339 @@ h2 {
 	}
 }
 
+.default-modal {
+	.container {
+		border-radius: 8px;
+		background-color: #fff;
+		padding: 40px;
+		width: 100%;
+		position: relative;
+
+		.switchmodal {
+			margin-bottom: 20px;
+			padding-bottom: 20px;
+			display: flex;
+			border-bottom: 1px solid $clr-greytext2;
+
+			#userEmail {
+				margin-left: 3px;
+			}
+
+			button {
+				color: $clr-greytext !important;
+
+			}
+		}
+
+		form {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+
+			button {
+				width: 100%;
+				line-height: 1.4em;
+			}
+
+			.default-form-field {
+				position: relative;
+				width: 100%;
+
+				label {
+					width: 100%;
+					@extend %text_body2;
+					color: $clr-main;
+					margin-bottom: 8px
+				}
+
+				input {
+					width: 100%;
+					border-radius: 4px;
+					@extend %text_body2;
+					color: $clr-main;
+					padding: .85em .9em;
+					line-height: 1em;
+					border: 1px solid $clr-greytext2;
+				}
+			}
+		}
+
+		.btn-close {
+			position: absolute;
+			right: 40px;
+			top: 40px;
+			outline: none !important;
+			color: $clr-main !important;
+			border: none !important;
+			box-shadow: none !important
+		}
+	}
+
+	&#TimeoutForm {
+		.container {
+			border-radius: 8px;
+			background-color: $clr-main;
+			padding: 40px;
+			width: 100%;
+			position: relative;
+			color: #fff;
+
+			h2 {
+				color: #fff;
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+				width: 100%;
+				border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
+			}
+
+			form {
+
+				.default-form-field {
+
+					label {
+						color: #fff;
+					}
+
+					input {
+						background-color: transparent;
+						color: #fff;
+						border: 1px solid rgba($color: #fff, $alpha: .2);
+					}
+				}
+
+				button {
+					color: $clr-main !important;
+					background-color: #fff;
+				}
+
+				input[type="date"]::-webkit-calendar-picker-indicator {
+					filter: invert(100%);
+				}
+			}
+
+			.btn-close {
+				filter: invert(100%);
+			}
+		}
+	}
+}
+
+#breadcrumbs {
+	margin-top: 110px;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	margin-bottom: 20px;
+
+	.bc-link {
+		@extend %text_body1;
+		color: rgba($color: $clr-black, $alpha: .4);
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		&::after {
+			content: url('data:image/svg+xml,<svg width="5" height="6" viewBox="0 0 5 6" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2.15674" cy="3" r="2.15674" fill="%23242424" fill-opacity="0.4"/></svg>');
+			margin-top: -8px;
+		}
+
+		&.bc-active {
+
+			color: $clr-black;
+
+			&::after {
+				content: none;
+				width: 5px;
+				height: 6px;
+			}
+		}
+	}
+}
+
+#about-page {
+	.about-paragraph {
+		@extend %text_body3;
+		color: rgba($color: #413E37, $alpha: 0.5);
+		width: 35em;
+		margin-bottom: 20px;
+
+		&:last-child {
+			margin-bottom: 40px
+		}
+	}
+
+	.about-paragraph-title {
+		@extend %text_body2;
+		font-family: $f-b;
+		margin-bottom: 8px
+	}
+}
+
+main:has(#success-page) {
+	display: flex;
+	width: 100%;
+}
+
+#success-page {
+	margin-top: 70px;
+	width: 100%;
+
+	.container {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		h2 {
+			text-align: center;
+		}
+
+		.sp-desc {
+			margin-bottom: 20px;
+			text-align: center;
+			color: $clr-greytext;
+		}
+	}
+}
+
+#user-page {
+	margin-top: 110px;
+
+	.user-info {
+		display: flex;
+		gap: 20px;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid $clr-greytext2;
+
+		img {
+			aspect-ratio: 1;
+			width: 220px;
+			object-fit: cover;
+			border-radius: 4px;
+		}
+
+		.user-id-orders {
+			display: flex;
+			gap: 20px;
+		}
+
+		.pt-row {
+			display: flex;
+			color: $clr-greytext;
+
+			div {
+				font-family: $f-b;
+				color: $clr-main;
+				margin-right: 3px;
+			}
+		}
+	}
+
+	form {
+
+		margin-bottom: 40px;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		button {
+			width: 100%;
+			line-height: 1.4em;
+		}
+
+		.default-form-field {
+			width: calc(50% - 10px);
+
+			label {
+				width: 100%;
+				@extend %text_body2;
+				color: $clr-main;
+				margin-bottom: 8px
+			}
+
+			input {
+				width: 100%;
+				border-radius: 4px;
+				@extend %text_body2;
+				color: $clr-main;
+				padding: .85em .9em;
+				line-height: 1em;
+				border: 1px solid $clr-greytext2;
+			}
+		}
+		.default-form-field-gender {
+			label {
+				width: 100%;
+				@extend %text_body2;
+				color: $clr-main;
+				margin-bottom: 8px
+			}
+		}
+		.toggleContainer {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			width: fit-content;
+			border: 3px solid #343434;
+			border-radius: 20px;
+			background: #343434;
+			font-weight: bold;
+			color: #343434;
+			cursor: pointer;
+		}
+
+		.toggleContainer::before {
+			content: '';
+			position: absolute;
+			width: 50%;
+			height: 100%;
+			left: 0%;
+			border-radius: 20px;
+			background: white;
+			transition: all 0.3s;
+		}
+
+		.toggleCheckbox:checked+.toggleContainer::before {
+			left: 50%;
+		}
+
+		.toggleContainer div {
+			padding: 6px;
+			text-align: center;
+			z-index: 1;
+		}
+
+		.toggleCheckbox {
+			display: none;
+		}
+
+		.toggleCheckbox:checked+.toggleContainer div:first-child {
+			color: white;
+			transition: color 0.3s;
+		}
+
+		.toggleCheckbox:checked+.toggleContainer div:last-child {
+			color: #343434;
+			transition: color 0.3s;
+		}
+
+		.toggleCheckbox+.toggleContainer div:first-child {
+			color: #343434;
+			transition: color 0.3s;
+		}
+
+		.toggleCheckbox+.toggleContainer div:last-child {
+			color: white;
+			transition: color 0.3s;
+		}
+	}
+}
+
 @import "header.scss";
 @import "footer.scss";
 @import "card.scss";
-@import "breadcrumbs.scss";
 @import "main.scss";
 @import "catalog.scss";
 @import "product.scss";
