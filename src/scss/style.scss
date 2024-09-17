@@ -523,7 +523,7 @@ main:has(#success-page) {
 			}
 		}
 		.default-form-field-gender {
-			label {
+			label:first-child {
 				width: 100%;
 				@extend %text_body2;
 				color: $clr-main;
@@ -535,11 +535,10 @@ main:has(#success-page) {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			width: fit-content;
-			border: 3px solid #343434;
-			border-radius: 20px;
-			background: #343434;
-			font-weight: bold;
-			color: #343434;
+			border: 4px solid #FAF8F6;
+			border-radius: 4px;
+			background: #FAF8F6;
+			color: $clr-greytext;
 			cursor: pointer;
 		}
 
@@ -549,7 +548,7 @@ main:has(#success-page) {
 			width: 50%;
 			height: 100%;
 			left: 0%;
-			border-radius: 20px;
+			border-radius: 3px;
 			background: white;
 			transition: all 0.3s;
 		}
@@ -559,7 +558,8 @@ main:has(#success-page) {
 		}
 
 		.toggleContainer div {
-			padding: 6px;
+			padding: 13px 20px;
+			@extend %text_body2;
 			text-align: center;
 			z-index: 1;
 		}
@@ -569,22 +569,22 @@ main:has(#success-page) {
 		}
 
 		.toggleCheckbox:checked+.toggleContainer div:first-child {
-			color: white;
+			color: $clr-greytext;
 			transition: color 0.3s;
 		}
 
 		.toggleCheckbox:checked+.toggleContainer div:last-child {
-			color: #343434;
+			color: $clr-main;
 			transition: color 0.3s;
 		}
 
 		.toggleCheckbox+.toggleContainer div:first-child {
-			color: #343434;
+			color: $clr-main;
 			transition: color 0.3s;
 		}
 
 		.toggleCheckbox+.toggleContainer div:last-child {
-			color: white;
+			color: $clr-greytext;
 			transition: color 0.3s;
 		}
 	}

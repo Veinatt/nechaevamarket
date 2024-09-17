@@ -237,7 +237,7 @@ h2 {
   letter-spacing: -0.06em;
 }
 
-#user-page form .default-form-field-gender label, #user-page form .default-form-field input, #user-page form .default-form-field label, #about-page .about-paragraph-title, .default-modal .container form .default-form-field input, .default-modal .container form .default-form-field label, .main-btn.outline-btn, .main-btn {
+#user-page form .toggleContainer div, #user-page form .default-form-field-gender label:first-child, #user-page form .default-form-field input, #user-page form .default-form-field label, #about-page .about-paragraph-title, .default-modal .container form .default-form-field input, .default-modal .container form .default-form-field label, .main-btn.outline-btn, .main-btn {
   font-family: Primary-Medium;
   font-size: 18px;
   line-height: normal;
@@ -593,7 +593,7 @@ main:has(#success-page) {
   line-height: 1em;
   border: 1px solid rgba(65, 62, 55, 0.2);
 }
-#user-page form .default-form-field-gender label {
+#user-page form .default-form-field-gender label:first-child {
   width: 100%;
   color: #413E37;
   margin-bottom: 8px;
@@ -603,11 +603,10 @@ main:has(#success-page) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: fit-content;
-  border: 3px solid #343434;
-  border-radius: 20px;
-  background: #343434;
-  font-weight: bold;
-  color: #343434;
+  border: 4px solid #FAF8F6;
+  border-radius: 4px;
+  background: #FAF8F6;
+  color: rgba(65, 62, 55, 0.4);
   cursor: pointer;
 }
 #user-page form .toggleContainer::before {
@@ -616,7 +615,7 @@ main:has(#success-page) {
   width: 50%;
   height: 100%;
   left: 0%;
-  border-radius: 20px;
+  border-radius: 3px;
   background: white;
   transition: all 0.3s;
 }
@@ -624,7 +623,7 @@ main:has(#success-page) {
   left: 50%;
 }
 #user-page form .toggleContainer div {
-  padding: 6px;
+  padding: 13px 20px;
   text-align: center;
   z-index: 1;
 }
@@ -632,19 +631,19 @@ main:has(#success-page) {
   display: none;
 }
 #user-page form .toggleCheckbox:checked + .toggleContainer div:first-child {
-  color: white;
+  color: rgba(65, 62, 55, 0.4);
   transition: color 0.3s;
 }
 #user-page form .toggleCheckbox:checked + .toggleContainer div:last-child {
-  color: #343434;
+  color: #413E37;
   transition: color 0.3s;
 }
 #user-page form .toggleCheckbox + .toggleContainer div:first-child {
-  color: #343434;
+  color: #413E37;
   transition: color 0.3s;
 }
 #user-page form .toggleCheckbox + .toggleContainer div:last-child {
-  color: white;
+  color: rgba(65, 62, 55, 0.4);
   transition: color 0.3s;
 }
 
