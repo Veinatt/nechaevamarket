@@ -76,7 +76,7 @@
             <div class="modal-content">
                 <div class="container">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    <h2>Вход</h2>
+                    <h2>Регистрация</h2>
                     <div class="switchmodal">
                         Есть аккаунт?
                         <button type="button" data-bs-toggle="modal" data-bs-target="#LoginForm">Войти</button>
@@ -94,7 +94,8 @@
                             <label for=RegPassAgain">Повторите пароль</label>
                             <input type="password" placeholder="Повторите пароль" id="RegPassAgain">
                         </div>
-                        <button type="button" class="main-btn" data-bs-toggle="modal" data-bs-target="#CheckForm">Зарегистрироваться</button>
+                        <button type="button" class="main-btn" data-bs-toggle="modal"
+                            data-bs-target="#CheckForm">Зарегистрироваться</button>
                     </form>
                 </div>
             </div>
@@ -112,25 +113,28 @@
                         <button type="button" data-bs-toggle="modal" data-bs-target="#LoginForm">Изменить</button>
                     </div>
                     <form action="">
-                        <div class="default-form-field">
-                            <label for="RegMail">E-mail</label>
-                            <input type="email" placeholder="example@gmail.com" id=RegMail">
+                        <div class="form__group form__pincode">
+                            <input type="tel" name="pincode-1" maxlength="1" pattern="[\d]*" tabindex="1"
+                                placeholder="·" autocomplete="off">
+                            <input type="tel" name="pincode-2" maxlength="1" pattern="[\d]*" tabindex="2"
+                                placeholder="·" autocomplete="off">
+                            <input type="tel" name="pincode-3" maxlength="1" pattern="[\d]*" tabindex="3"
+                                placeholder="·" autocomplete="off">
+                            <input type="tel" name="pincode-4" maxlength="1" pattern="[\d]*" tabindex="4"
+                                placeholder="·" autocomplete="off">
                         </div>
-                        <div class="default-form-field">
-                            <label for=RegPass">Пароль</label>
-                            <input type="password" placeholder="Введите пароль" id=RegPass">
-                        </div>
-                        <div class="default-form-field">
-                            <label for=RegPassAgain">Повторите пароль</label>
-                            <input type="password" placeholder="Повторите пароль" id="RegPassAgain">
-                        </div>
-                        <button type="submit" class="main-btn">Готово</button>
+                        <button type="submit" class="main-btn" id="submit-code">Готово</button>
+                        <button class="timeout-code-btn" id="timer-btn" type="button">Повторно запросить код
+                            <div id="timer-time"></div></button>
+                        <button class="timeout-code-btn" id="timer-success-btn" type="button">Повторно запросить
+                            код</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal fade default-modal" id="TimeoutForm" tabindex="-1" aria-labelledby="TimeoutLabel" aria-hidden="true">
+    <div class="modal fade default-modal" id="TimeoutForm" tabindex="-1" aria-labelledby="TimeoutLabel"
+        aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
             <div class="modal-content">
                 <div class="container">

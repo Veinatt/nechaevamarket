@@ -230,7 +230,7 @@ h2 {
   letter-spacing: -0.06em;
 }
 
-.catalog-cont .cards-cont .sort-block, .catalog-cont .filters-cont .custom-checkbox, #main-page_contacts .mp_contacts-cont .mp_contacts-cont-line .mp_contacts-desc, #main-page_categories .mp_categories-cont .mp_category, #main-page_bricks .mp_bricks-cont .mp_brick, #main-page_front .mp_front-desc, .product-card-container .name-shop .product-name, footer .container .right-cont-col-link, #breadcrumbs .bc-link, body {
+.catalog-cont .cards-cont .sort-block, .catalog-cont .filters-cont .custom-checkbox, #main-page_contacts .mp_contacts-cont .mp_contacts-cont-line .mp_contacts-desc, #main-page_categories .mp_categories-cont .mp_category, #main-page_bricks .mp_bricks-cont .mp_brick, #main-page_front .mp_front-desc, .product-card-container .name-shop .product-name, footer .container .right-cont-col-link, #breadcrumbs .bc-link, .default-modal#CheckForm .timeout-code-btn, body {
   font-family: Primary-Medium;
   font-size: 20px;
   line-height: 1.1em;
@@ -472,6 +472,104 @@ h2 span {
 }
 .default-modal#TimeoutForm .container .btn-close {
   filter: invert(100%);
+}
+.default-modal#CheckForm .timeout-code-btn {
+  display: flex;
+  gap: 5px;
+  color: rgba(65, 62, 55, 0.4);
+  text-align: center;
+  justify-content: center;
+}
+.default-modal#CheckForm #timer-btn {
+  pointer-events: none;
+}
+.default-modal#CheckForm #timer-success-btn {
+  display: none;
+}
+.default-modal#CheckForm .form {
+  display: block;
+}
+.default-modal#CheckForm .form__group {
+  margin: 10px 0 0;
+}
+.default-modal#CheckForm .form__group--error.form__pincode > input {
+  background-color: #eb3b3b;
+}
+.default-modal#CheckForm .form__group--error.form__pincode > input[disabled] {
+  background-color: #eb3b3b;
+  color: #fff;
+  opacity: 1;
+}
+.default-modal#CheckForm .form__group--success.form__pincode > input {
+  background-color: #32c832;
+}
+.default-modal#CheckForm .form__group--success.form__pincode > input[disabled] {
+  background-color: #32c832;
+  color: #fff;
+  opacity: 1;
+}
+.default-modal#CheckForm .form__pincode {
+  display: block;
+  width: 100%;
+  margin: 10px auto 20px;
+  padding: 0;
+}
+.default-modal#CheckForm .form__pincode:before,
+.default-modal#CheckForm .form__pincode:after {
+  display: table;
+  content: "";
+}
+.default-modal#CheckForm .form__pincode:after {
+  clear: both;
+}
+.default-modal#CheckForm .form__pincode > label {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+.default-modal#CheckForm .form__pincode > input[type=number] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.default-modal#CheckForm .form__pincode > input {
+  display: inline-block;
+  float: left;
+  width: 24%;
+  height: 50px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 2em;
+  color: #181819;
+  border: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 2px 2px 0 0;
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+  cursor: default;
+  user-select: none;
+  margin: 0;
+  margin-top: 10px;
+  margin-right: 1%;
+  padding: 0;
+}
+.default-modal#CheckForm .form__pincode > input:focus {
+  outline: 0;
+  box-shadow: none;
+  border-color: #1486f0;
+  animation: border-pulsate 1.5s infinite;
+  -webkit-tap-highlight-color: transparent;
+}
+.default-modal#CheckForm .form__pincode > input:last-child {
+  margin-right: 0;
+}
+.default-modal#CheckForm .form__pincode > input[disabled] {
+  background: #eee;
+  opacity: 1;
+}
+.default-modal#CheckForm .form__buttons {
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px 0 0;
 }
 
 #breadcrumbs {
