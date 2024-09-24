@@ -18,7 +18,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        gap: 5px;
         .product-name {
             @extend %text_body1;
             color: $clr-main;

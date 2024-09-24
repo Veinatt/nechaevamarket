@@ -13,9 +13,12 @@
 
 	h1 {
 		width: 12em;
+		position: relative;
+		z-index: 5;
 	}
 
 	.mp_front-desc {
+		z-index: 5;
 		@extend %text_body1;
 		color: $clr-main;
 		background-color: #ECE8DE;
@@ -37,12 +40,26 @@
 		position: absolute;
 		left: calc(var(--bs-gutter-x) * .5);
 		bottom: 60px;
+		z-index: 5;
 	}
 
 	img {
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		pointer-events: none;
+		@media (max-width:1440px) {
+			max-width: 800px;
+		}
+		@media (max-width:1400px) {
+			max-width: 1000px;
+		}
+		@media (max-width:1400px) and (max-height:1000px) {
+			max-width: 800px;
+		}
+		@media (max-width:1400px) and (max-height:800px) {
+			max-width: 700px;
+		}
 	}
 }
 
@@ -57,6 +74,13 @@
 
 		.product-card {
 			width: calc((100% - 60px) / 4);
+			@media (max-width:1200px) {
+				width: calc((100% - 40px) / 3);
+				&:last-child {
+					display: none
+				}
+			}
+
 		}
 	}
 }
@@ -88,12 +112,17 @@
 				line-height: 1.1em;
 				font-size: 40px;
 			}
-
+			.mp_brick-desc {
+				@media (max-width:1400px) {
+					max-width: 100%;
+				}
+			}
 			&:nth-child(1) {
 				width: calc((100% - 24px) * (552 / 1336));
 
 				.mp_brick-desc {
 					width: 11em;
+					
 				}
 			}
 

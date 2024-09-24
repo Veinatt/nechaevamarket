@@ -32,9 +32,9 @@ ready(function () {
     document.querySelector('header').classList.remove('active');
   }
   const TimeoutModal = new bootstrap.Modal('#CheckForm', {})
-  setTimeout(() => {
-    TimeoutModal.show()
-  }, 300);
+  // setTimeout(() => {
+  //   TimeoutModal.show()
+  // }, 300);
   const TimeoutModalEl = document.getElementById('CheckForm')
   TimeoutModalEl.addEventListener('show.bs.modal', event => {
     if (typeof localStorage.getItem("min") !== 'undefined' && typeof localStorage.getItem("sec") !== 'undefined' && localStorage.getItem("min") != null && localStorage.getItem("sec") != null) {
