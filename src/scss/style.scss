@@ -53,7 +53,12 @@ $f-yo: YesevaOne-Regular;
 	@media (max-width: 1200px) {
 		font-size: 52px;
 	}
-
+	@media (max-width: 1000px) {
+		font-size: 44px;
+	}
+	@media (max-width: 600px) {
+		font-size: 40px;
+	}
 	// @media (max-width: 800px) {
 	// 	font-size: 32px;
 	// }
@@ -67,6 +72,12 @@ $f-yo: YesevaOne-Regular;
 	@media (max-width: 1200px) {
 		font-size: 44px;
 	}
+	@media (max-width: 1000px) {
+		font-size: 36px;
+	}
+	@media (max-width: 600px) {
+		font-size: 32px;
+	}
 	// @media (max-width: 800px) {
 	// 	font-size: 32px;
 	// }
@@ -77,7 +88,7 @@ $f-yo: YesevaOne-Regular;
 	font-size: 13px;
 	line-height: 1.1em;
 	letter-spacing: -0.06em;
-	@media (max-width: 1200px) {
+	@media (max-width: 1000px) {
 		font-size: 12px;
 	}
 	// @media (max-width: 800px) {
@@ -93,6 +104,9 @@ $f-yo: YesevaOne-Regular;
 	@media (max-width: 1200px) {
 		font-size: 18px;
 	}
+	@media (max-width: 600px) {
+		font-size: 16px;
+	}
 	// @media (max-width: 800px) {
 	// 	font-size: 32px;
 	// }
@@ -106,6 +120,9 @@ $f-yo: YesevaOne-Regular;
 	@media (max-width: 1200px) {
 		font-size: 16px;
 	}
+	@media (max-width: 600px) {
+		font-size: 14px;
+	}
 	// @media (max-width: 800px) {
 	// 	font-size: 32px;
 	// }
@@ -118,6 +135,9 @@ $f-yo: YesevaOne-Regular;
 	letter-spacing: -0.06em;
 	@media (max-width: 1200px) {
 		font-size: 14px;
+	}
+	@media (max-width: 600px) {
+		font-size: 13px;
 	}
 	// @media (max-width: 800px) {
 	// 	font-size: 32px;
@@ -172,6 +192,9 @@ body {
 	letter-spacing: -.06em;
 	color: $clr-main;
 	@extend %text_body1;
+	&.lock {
+		overflow: hidden !important;
+	}
 }
 
 
@@ -223,6 +246,12 @@ main {
 	color: $clr-main;
 	line-height: 1em;
 	letter-spacing: -.06em;
+	@media (max-width: 1200px) {
+		font-size: 30px;
+	}
+	@media (max-width: 600px) {
+		font-size: 24px;
+	}
 }
 
 h1 {
@@ -577,7 +606,7 @@ main:has(#success-page) {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
+		padding: 50px 0;
 		h2 {
 			text-align: center;
 		}

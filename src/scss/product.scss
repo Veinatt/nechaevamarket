@@ -70,10 +70,22 @@
     
             .product-price {
                 font-size: 36px;
+                @media (max-width: 1200px) {
+                    font-size: 28px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                }
             }
     
             .product-old-price {
                 font-size: 24px;
+                @media (max-width: 1200px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 16px;
+                }
             }
     
             .product-discount {
@@ -81,6 +93,12 @@
                 @extend %text_des;
                 padding: 2px 5px;
                 font-size: 24px;
+                @media (max-width: 1200px) {
+                    font-size: 13px;
+                }
+                @media (max-width: 600px) {
+                    font-size: 12px;
+                }
             }
         }
         .product-desc{
