@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body,
 div,
@@ -319,6 +320,16 @@ footer .container .right-cont-col-title, #about-page .about-paragraph, .price-li
 #main-page_contacts, #main-page_categories, #main-page_bricks {
   margin-top: 80px;
 }
+@media (max-width: 1200px) {
+  #main-page_contacts, #main-page_categories, #main-page_bricks {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 600px) {
+  #main-page_contacts, #main-page_categories, #main-page_bricks {
+    margin-top: 20px;
+  }
+}
 
 .catalog-cont .filters-cont .custom-checkbox .checkmark, .catalog-cont .filters-cont .panel, .catalog-cont .filters-cont .filter-block .accordion:after, .catalog-cont .filters-cont .filter-block .accordion, .main-btn, button,
 button:hover,
@@ -377,7 +388,7 @@ body.lock {
   cursor: pointer;
   color: #fff !important;
   background-color: #413E37;
-  padding: 0.85em 0.9em;
+  padding: 16px;
   border-radius: 0.2em;
   line-height: 1.4em;
   position: relative;
@@ -429,10 +440,20 @@ h1 {
   color: #413E37;
   margin-bottom: 25px;
 }
+@media (max-width: 600px) {
+  h1 {
+    margin-bottom: 18px;
+  }
+}
 
 h2 {
   color: #413E37;
   margin-bottom: 25px;
+}
+@media (max-width: 600px) {
+  h2 {
+    margin-bottom: 14px;
+  }
 }
 h2 span {
   color: rgba(65, 62, 55, 0.5);
@@ -448,6 +469,11 @@ h2 span {
   font-family: Primary-Bold;
   font-size: 24px;
   line-height: 1.1em;
+}
+@media (max-width: 600px) {
+  .price-list .product-price {
+    font-size: 18px;
+  }
 }
 .price-list:has(.product-old-price) .product-price {
   color: #488A1D;
@@ -657,6 +683,16 @@ h2 span {
   align-items: center;
   margin-bottom: 20px;
 }
+@media (max-width: 600px) {
+  #breadcrumbs {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 380px) {
+  #breadcrumbs {
+    margin-top: 80px;
+  }
+}
 #breadcrumbs .bc-link {
   color: rgba(36, 36, 36, 0.4);
   display: flex;
@@ -680,6 +716,11 @@ h2 span {
   color: rgba(65, 62, 55, 0.5);
   width: 35em;
   margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+  #about-page .about-paragraph {
+    max-width: 100%;
+  }
 }
 #about-page .about-paragraph:last-child {
   margin-bottom: 40px;
@@ -718,6 +759,26 @@ main:has(#success-page) {
 #user-page {
   margin-top: 110px;
 }
+@media (max-width: 600px) {
+  #user-page {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 380px) {
+  #user-page {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 600px) {
+  #user-page h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 380px) {
+  #user-page h2 {
+    font-size: 20px;
+  }
+}
 #user-page .user-info {
   display: flex;
   gap: 20px;
@@ -725,15 +786,30 @@ main:has(#success-page) {
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(65, 62, 55, 0.2);
 }
+@media (max-width: 600px) {
+  #user-page .user-info {
+    gap: 12px;
+  }
+}
 #user-page .user-info img {
   aspect-ratio: 1;
   width: 220px;
   object-fit: cover;
   border-radius: 4px;
 }
+@media (max-width: 600px) {
+  #user-page .user-info img {
+    width: 95px;
+  }
+}
 #user-page .user-info .user-id-orders {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 600px) {
+  #user-page .user-info .user-id-orders {
+    gap: 12px;
+  }
 }
 #user-page .user-info .pt-row {
   display: flex;
@@ -750,9 +826,19 @@ main:has(#success-page) {
   flex-wrap: wrap;
   gap: 20px;
 }
+@media (max-width: 600px) {
+  #user-page form {
+    gap: 12px;
+  }
+}
 #user-page form button {
   width: 100%;
   line-height: 1.4em;
+}
+@media (max-width: 600px) {
+  #user-page form button {
+    order: 6;
+  }
 }
 #user-page form .default-form-field {
   width: calc(50% - 10px);
@@ -770,6 +856,32 @@ main:has(#success-page) {
   line-height: 1em;
   border: 1px solid rgba(65, 62, 55, 0.2);
 }
+@media (max-width: 600px) {
+  #user-page form .default-form-field {
+    width: 100%;
+  }
+  #user-page form .default-form-field:nth-child(1) {
+    order: 1;
+  }
+  #user-page form .default-form-field:nth-child(2) {
+    order: 4;
+  }
+  #user-page form .default-form-field:nth-child(3) {
+    order: 3;
+  }
+  #user-page form .default-form-field:nth-child(4) {
+    order: 5;
+  }
+  #user-page form .default-form-field:nth-child(5) {
+    order: 2;
+  }
+}
+@media (max-width: 600px) {
+  #user-page form .default-form-field-gender {
+    width: 100%;
+    order: 4;
+  }
+}
 #user-page form .default-form-field-gender label:first-child {
   width: 100%;
   color: #413E37;
@@ -785,6 +897,11 @@ main:has(#success-page) {
   background: #FAF8F6;
   color: rgba(65, 62, 55, 0.4);
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  #user-page form .toggleContainer {
+    width: 100%;
+  }
 }
 #user-page form .toggleContainer::before {
   content: "";
@@ -831,11 +948,16 @@ header {
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid rgba(65, 62, 55, 0.25);
-  padding: 16px;
+  padding: 16px 0;
   background: #fff;
 }
 header.hide {
   top: -69px;
+}
+@media (max-width: 600px) {
+  header.hide {
+    top: -58px;
+  }
 }
 header * {
   transition: all 0.3s ease-in-out;
@@ -847,6 +969,16 @@ header .container {
   font-size: 20px;
   font-family: Primary-Medium;
 }
+@media (max-width: 1200px) {
+  header .container {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  header .container {
+    font-size: 16px;
+  }
+}
 header .container .left-menu {
   display: flex;
   align-items: center;
@@ -856,6 +988,17 @@ header .container .left-menu {
 header .container .left-menu .logo-text {
   position: relative;
   z-index: 70;
+}
+header .container .left-menu .logo-text.logo-header-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  header .container .left-menu .logo-text {
+    display: none;
+  }
+  header .container .left-menu .logo-text.logo-header-mobile {
+    display: block;
+  }
 }
 header .container .left-menu .burger-wrapper {
   position: relative;
@@ -939,6 +1082,14 @@ header .container .left-menu .mobile-header {
     justify-content: center;
     align-items: center;
   }
+}
+@media (max-width: 1000px) and (max-width: 600px) {
+  header .container .left-menu .mobile-header {
+    height: calc(100dvh - 57px);
+    top: 57px;
+  }
+}
+@media (max-width: 1000px) {
   header .container .left-menu .mobile-header.activebur {
     left: 0;
   }
@@ -954,6 +1105,16 @@ header .container .left-menu .menu-links::before, header .container .left-menu .
   width: 1px;
   height: 16px;
   background: rgba(65, 62, 55, 0.2);
+}
+@media (max-width: 1000px) {
+  header .container .left-menu .menu-links {
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+  header .container .left-menu .menu-links::before, header .container .left-menu .menu-links::after {
+    display: none;
+  }
 }
 header .container .left-menu .header-tel {
   position: relative;
@@ -977,6 +1138,11 @@ header .container .right-menu {
   align-items: center;
   gap: 12px;
 }
+@media (max-width: 600px) {
+  header .container .right-menu {
+    gap: 6px;
+  }
+}
 header .container .right-menu > * {
   display: flex;
   align-items: center;
@@ -988,6 +1154,11 @@ header .container .right-menu > *:first-child::after {
   height: 16px;
   background: rgba(65, 62, 55, 0.2);
   margin-left: 12px;
+}
+@media (max-width: 600px) {
+  header .container .right-menu > *:first-child::after {
+    margin-left: 6px;
+  }
 }
 header .container .right-menu .cart {
   color: #413E37 !important;
@@ -1004,6 +1175,14 @@ header .container .right-menu .log-in::before {
   content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.16602 5.83333L7.99935 7L10.166 9.16667H1.66602V10.8333H10.166L7.99935 13L9.16602 14.1667L13.3327 10L9.16602 5.83333ZM16.666 15.8333H9.99935V17.5H16.666C17.5827 17.5 18.3327 16.75 18.3327 15.8333V4.16667C18.3327 3.25 17.5827 2.5 16.666 2.5H9.99935V4.16667H16.666V15.8333Z" fill="%23413E37" /></svg>');
   width: 20px;
   height: 20px;
+}
+header .container .right-menu .log-in::after {
+  content: "Войти";
+}
+@media (max-width: 600px) {
+  header .container .right-menu .log-in::after {
+    display: none;
+  }
 }
 
 footer {
@@ -1050,6 +1229,7 @@ footer .container .right-cont {
   display: flex;
   gap: 40px;
   align-items: flex-start;
+  justify-content: flex-end;
 }
 @media (max-width: 1000px) {
   footer .container .right-cont {
@@ -1121,15 +1301,39 @@ footer .container .right-cont-col-link {
   padding-top: 110px;
   background: #F6F3EC;
   position: relative;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  #main-page_front {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 380px) {
+  #main-page_front {
+    padding-top: 80px;
+  }
 }
 #main-page_front .container {
   position: relative;
   height: 100%;
 }
+@media (max-width: 600px) {
+  #main-page_front .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 #main-page_front h1 {
   width: 12em;
   position: relative;
   z-index: 5;
+}
+@media (max-width: 600px) {
+  #main-page_front h1 {
+    width: 100%;
+    text-align: center;
+  }
 }
 #main-page_front .mp_front-desc {
   z-index: 5;
@@ -1152,6 +1356,13 @@ footer .container .right-cont-col-link {
   left: calc(var(--bs-gutter-x) * 0.5);
   bottom: 60px;
   z-index: 5;
+}
+@media (max-width: 600px) {
+  #main-page_front .main-btn {
+    width: calc(100% - var(--bs-gutter-x));
+    text-align: center;
+    bottom: 20px;
+  }
 }
 #main-page_front img {
   position: absolute;
@@ -1179,15 +1390,32 @@ footer .container .right-cont-col-link {
     max-width: 700px;
   }
 }
+@media (max-width: 1000px) {
+  #main-page_front img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #main-page_front img {
+    max-width: calc(100% - 30px);
+    bottom: -50px;
+  }
+}
 
 #main-page_popular {
   position: relative;
   margin-top: 40px;
 }
+@media (max-width: 600px) {
+  #main-page_popular {
+    margin-top: 20px;
+  }
+}
 #main-page_popular .mp_popular-cards {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 #main-page_popular .mp_popular-cards .product-card {
   width: calc((100% - 60px) / 4);
@@ -1200,11 +1428,46 @@ footer .container .right-cont-col-link {
     display: none;
   }
 }
+@media (max-width: 600px) {
+  #main-page_popular .mp_popular-cards .product-card {
+    width: calc((100% - 20px) / 2);
+  }
+  #main-page_popular .mp_popular-cards .product-card:last-child {
+    display: block;
+  }
+}
+@media (max-width: 380px) {
+  #main-page_popular .mp_popular-cards .product-card {
+    width: 100%;
+  }
+  #main-page_popular .mp_popular-cards .product-card:last-child {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  #main-page_popular .main-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 
+#main-page_bricks h2 span:first-of-type {
+  color: #413E37;
+}
+@media (max-width: 600px) {
+  #main-page_bricks h2 span {
+    display: none;
+  }
+}
 #main-page_bricks .mp_bricks-cont {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont {
+    gap: 16px;
+  }
 }
 #main-page_bricks .mp_bricks-cont .mp_brick {
   display: flex;
@@ -1217,10 +1480,49 @@ footer .container .right-cont-col-link {
   padding: 20px;
   color: #000;
 }
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick {
+    width: 100% !important;
+    height: auto;
+    background-color: #ECE8DE;
+    padding: 10px 16px;
+    border-radius: 3.2em;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+  }
+}
 #main-page_bricks .mp_bricks-cont .mp_brick .mp_brick-title {
   font-family: YesevaOne-Regular;
-  line-height: 1.1em;
+  line-height: 1em;
   font-size: 40px;
+  position: relative;
+  height: 40px;
+  aspect-ratio: 1;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick .mp_brick-title {
+    height: 24px;
+    font-size: 24px;
+  }
+}
+#main-page_bricks .mp_bricks-cont .mp_brick .mp_brick-title::before {
+  display: inline-block;
+  height: 40px;
+  aspect-ratio: 1;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick .mp_brick-title::before {
+    height: 24px;
+  }
+}
+#main-page_bricks .mp_bricks-cont .mp_brick .mp_brick-desc {
+  position: relative;
 }
 @media (max-width: 1400px) {
   #main-page_bricks .mp_bricks-cont .mp_brick .mp_brick-desc {
@@ -1230,32 +1532,115 @@ footer .container .right-cont-col-link {
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(1) {
   width: calc((100% - 24px) * 0.4131736527);
 }
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(1) .mp_brick-title::before {
+  content: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="2" fill="%233C4137" /><path d="M24 17H27L22 24M18 17H22L20 25M13 17H16L18 24M23 12H25L27 15H24M19 12H21L22 15H18M15 12H17L16 15H13M14 10L10 16L20 30L30 16L26 10H14Z" fill="white" /></svg>');
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(1) .mp_brick-title::before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 9H19L14 16M10 9H14L12 17M5 9H8L10 16M15 4H17L19 7H16M11 4H13L14 7H10M7 4H9L8 7H5M6 2L2 8L12 22L22 8L18 2H6Z" fill="%233C4137"/></svg>');
+  }
+}
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(1) .mp_brick-desc {
   width: 11em;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(1) .mp_brick-desc {
+    width: 15em;
+  }
+}
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(1) .mp_brick-desc::before {
+  content: "Бесплатно подбираем браслет лично под Вас!";
 }
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) {
   width: calc((100% - 24px) * 0.3405688623);
 }
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) .mp_brick-title::before {
+  content: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="2" fill="%233B3759" /><g clip-path="url(%23clip0_3443_429)"><path d="M23.043 8.62261C22.2627 10.2437 21.2399 11.4425 20.0855 11.4425C18.936 11.4425 17.8807 10.2577 17.1016 8.64904C17.1188 10.4939 16.6465 12.9092 15.6514 13.5768C14.6563 14.2443 13.3245 13.0142 11.9556 12.0709C12.7738 13.6665 13.9288 15.2349 13.3515 16.3965C12.7792 17.5485 10.5778 18.0821 8.99805 18.0665C10.3733 18.9707 12.6938 20.2135 12.6939 21.544C12.694 22.8745 10.3734 24.0617 8.99805 24.9659C10.5778 24.9503 12.7791 25.5102 13.3516 26.6622C13.9248 27.8158 12.9283 29.3017 11.7696 30.6729C13.8708 29.9505 14.8231 30.4041 15.7715 31.1797H17.2598C15.2563 29.5198 13.8819 26.1253 13.8819 22.2002C13.8818 16.6399 16.6437 12.1265 20.0415 12.1265C23.4394 12.1265 26.2012 16.6401 26.2012 22.2003C26.2012 26.1256 24.8269 29.52 22.8233 31.1798H24.1036C25.0339 30.4945 25.969 29.9775 28.3076 30.7448C27.078 29.3262 26.3295 27.8159 26.9028 26.6622C27.4773 25.506 29.5586 24.946 31.1465 24.9659C29.7684 24.0614 27.6148 22.876 27.6148 21.544C27.6148 20.212 29.7684 18.9711 31.1464 18.0665C29.5586 18.0864 27.4774 17.5527 26.9028 16.3966C26.3256 15.235 27.3707 13.6666 28.189 12.071C26.8201 13.0141 25.4897 14.2453 24.4931 13.5768C23.4964 12.9082 23.0221 10.4769 23.0429 8.62256L23.043 8.62261ZM19.81 13.0171C18.8932 13.1363 18.0596 14.2154 18.0596 15.6143C18.0596 16.3853 18.3254 17.0668 18.7158 17.5377L19.1919 18.1104L18.461 18.2481C17.954 18.3435 17.5824 18.6108 17.2643 19.0479C16.946 19.485 16.7025 20.0953 16.5318 20.7984C16.2231 22.07 16.1531 23.6221 16.1423 24.9923H17.8341L17.8649 25.398L18.2926 31.1432H21.8638L22.2433 25.401L22.2697 24.9922H23.881C23.8798 23.6051 23.8604 22.0313 23.5807 20.7501C23.4262 20.0425 23.1922 19.4331 22.8702 19.001C22.5482 18.569 22.1609 18.3027 21.5915 18.2144L20.8443 18.0987L21.316 17.5084C21.6896 17.0398 21.943 16.3665 21.943 15.6143C21.9429 14.1229 21.0109 13.0215 20.0005 13.0215C19.8814 13.0215 19.8149 13.0167 19.8116 13.0171H19.8102H19.81Z" fill="white" /></g><defs><clipPath id="clip0_3443_429"><rect width="24" height="24" fill="white" transform="translate(8 8)" /></clipPath></defs></svg>');
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) .mp_brick-title::before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_3446_782)"><g clip-path="url(%23clip1_3446_782)"><path d="M15.0137 0.346727C14.2334 1.96785 13.2106 3.16659 12.0562 3.16659C10.9067 3.16659 9.85142 1.98182 9.07231 0.373164C9.08947 2.21807 8.61716 4.63335 7.62209 5.3009C6.62703 5.96845 5.29522 4.73831 3.92628 3.79499C4.74448 5.39062 5.89948 6.95905 5.32222 8.12062C4.74987 9.27262 2.54853 9.80624 0.96875 9.79059C2.34397 10.6948 4.66447 11.9376 4.66456 13.2682C4.66466 14.5987 2.34406 15.7858 0.96875 16.69C2.54853 16.6744 4.74983 17.2343 5.32231 18.3863C5.89545 19.5399 4.89903 21.0258 3.74028 22.3971C5.8415 21.6746 6.79381 22.1282 7.74219 22.9039H9.23047C7.22703 21.2439 5.85256 17.8494 5.85256 13.9244C5.85247 8.36404 8.61444 3.85063 12.0122 3.85063C15.4101 3.85063 18.1719 8.36423 18.1719 13.9244C18.1719 17.8497 16.7976 21.2441 14.794 22.9039H16.0743C17.0046 22.2186 17.9397 21.7016 20.2783 22.4689C19.0487 21.0503 18.3002 19.54 18.8735 18.3863C19.448 17.2302 21.5293 16.6702 23.1172 16.69C21.7391 15.7855 19.5855 14.6002 19.5855 13.2682C19.5855 11.9362 21.7391 10.6952 23.1171 9.79063C21.5293 9.81051 19.4481 9.27679 18.8735 8.12071C18.2963 6.95915 19.3415 5.39071 20.1597 3.79509C18.7908 4.73821 17.4605 5.96938 16.4638 5.3009C15.4671 4.63232 14.9928 2.20105 15.0136 0.34668L15.0137 0.346727ZM11.7808 4.74126C10.8639 4.86046 10.0303 5.93957 10.0303 7.33846C10.0303 8.10941 10.2961 8.79093 10.6865 9.26184L11.1626 9.83455L10.4317 9.97223C9.92474 10.0676 9.55311 10.3349 9.23497 10.7721C8.91669 11.2092 8.67322 11.8194 8.5025 12.5225C8.19383 13.7941 8.12384 15.3463 8.11297 16.7164H9.80483L9.83558 17.1222L10.2633 22.8673H13.8345L14.214 17.1251L14.2404 16.7164H15.8517C15.8505 15.3292 15.8311 13.7555 15.5514 12.4742C15.3969 11.7666 15.1629 11.1572 14.8409 10.7251C14.5189 10.2931 14.1316 10.0268 13.5622 9.93857L12.815 9.82279L13.2867 9.23249C13.6603 8.76393 13.9137 8.09062 13.9137 7.33846C13.9136 5.84704 12.9816 4.74566 11.9712 4.74566C11.8521 4.74566 11.7856 4.74084 11.7823 4.74126H11.7809H11.7808Z" fill="%233B3759"/></g></g><defs><clipPath id="clip0_3446_782"><rect width="24" height="24" fill="white"/></clipPath><clipPath id="clip1_3446_782"><rect width="24" height="24" fill="white" transform="translate(-0.0292969 -0.275391)"/></clipPath></defs></svg>');
+  }
+}
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) .mp_brick-desc {
   width: 15em;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) .mp_brick-desc {
+    width: 12em;
+  }
+}
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) .mp_brick-desc::before {
+  content: "Используем только натуральные камни, которые положительно влияют на Вашу энергетику!";
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(2) .mp_brick-desc::before {
+    content: "Используем только натуральные камни";
+  }
 }
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(3) {
   width: calc((100% - 24px) * 0.246257485);
 }
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(3) .mp_brick-title::before {
+  content: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="2" fill="%23665E40" /><path d="M28.318 11.982L20.3539 9.26797C20.2578 9.23516 20.1289 9.21875 20 9.21875C19.8711 9.21875 19.7422 9.23516 19.6461 9.26797L11.682 11.982C11.4875 12.0477 11.3281 12.2727 11.3281 12.4789V23.7852C11.3281 23.9914 11.4617 24.2633 11.6234 24.3922L19.7023 30.6875C19.7844 30.7508 19.8898 30.7836 19.9977 30.7836C20.1055 30.7836 20.2133 30.7508 20.293 30.6875L28.3719 24.3922C28.5336 24.2656 28.6672 23.9937 28.6672 23.7852V12.4789C28.6719 12.2727 28.5125 12.05 28.318 11.982ZM24.2773 15.9852L19.2945 22.8453C19.2595 22.8933 19.2137 22.9323 19.1607 22.9591C19.1078 22.986 19.0492 23 18.9898 23C18.9305 23 18.8719 22.986 18.819 22.9591C18.766 22.9323 18.7202 22.8933 18.6852 22.8453L15.7227 18.7672C15.6336 18.643 15.7227 18.4695 15.875 18.4695H17.1688C17.2883 18.4695 17.4031 18.5281 17.4734 18.6242L18.9898 20.7102L22.5266 15.8398C22.5969 15.7437 22.7094 15.6852 22.8312 15.6852H24.125C24.2773 15.6875 24.3664 15.8609 24.2773 15.9852Z" fill="white" /></svg>');
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(3) .mp_brick-title::before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_3446_786)"><path d="M3 4.08691C2.46957 4.08691 1.96086 4.29763 1.58579 4.6727C1.21071 5.04777 1 5.55648 1 6.08691V17.0869H3C3 17.8826 3.31607 18.6456 3.87868 19.2082C4.44129 19.7708 5.20435 20.0869 6 20.0869C6.79565 20.0869 7.55871 19.7708 8.12132 19.2082C8.68393 18.6456 9 17.8826 9 17.0869H15C15 17.8826 15.3161 18.6456 15.8787 19.2082C16.4413 19.7708 17.2044 20.0869 18 20.0869C18.7956 20.0869 19.5587 19.7708 20.1213 19.2082C20.6839 18.6456 21 17.8826 21 17.0869H23V12.0869L20 8.08691H17V4.08691M10 6.08691L14 10.0869L10 14.0869V11.0869H4V9.08691H10M17 9.58691H19.5L21.47 12.0869H17M6 15.5869C6.39782 15.5869 6.77936 15.7449 7.06066 16.0263C7.34196 16.3076 7.5 16.6891 7.5 17.0869C7.5 17.4847 7.34196 17.8663 7.06066 18.1476C6.77936 18.4289 6.39782 18.5869 6 18.5869C5.60218 18.5869 5.22064 18.4289 4.93934 18.1476C4.65804 17.8663 4.5 17.4847 4.5 17.0869C4.5 16.6891 4.65804 16.3076 4.93934 16.0263C5.22064 15.7449 5.60218 15.5869 6 15.5869ZM18 15.5869C18.3978 15.5869 18.7794 15.7449 19.0607 16.0263C19.342 16.3076 19.5 16.6891 19.5 17.0869C19.5 17.4847 19.342 17.8663 19.0607 18.1476C18.7794 18.4289 18.3978 18.5869 18 18.5869C17.6022 18.5869 17.2206 18.4289 16.9393 18.1476C16.658 17.8663 16.5 17.4847 16.5 17.0869C16.5 16.6891 16.658 16.3076 16.9393 16.0263C17.2206 15.7449 17.6022 15.5869 18 15.5869Z" fill="%23533356"/></g><defs><clipPath id="clip0_3446_786"><rect width="24" height="24" fill="white"/></clipPath></defs></svg>');
+  }
+}
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(3) .mp_brick-desc {
   width: 11em;
+}
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(3) .mp_brick-desc::before {
+  content: "Гарантия ";
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(3) .mp_brick-desc::before {
+    content: "Быстрая и безопасная доставка по всей России!";
+  }
 }
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) {
   width: calc((100% - 24px) * 0.3121257485);
 }
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-title::before {
+  content: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="2" fill="%23533356" /><path d="M11 12C10.4696 12 9.96086 12.2107 9.58579 12.5858C9.21071 12.9609 9 13.4696 9 14V25H11C11 25.7956 11.3161 26.5587 11.8787 27.1213C12.4413 27.6839 13.2044 28 14 28C14.7956 28 15.5587 27.6839 16.1213 27.1213C16.6839 26.5587 17 25.7956 17 25H23C23 25.7956 23.3161 26.5587 23.8787 27.1213C24.4413 27.6839 25.2044 28 26 28C26.7956 28 27.5587 27.6839 28.1213 27.1213C28.6839 26.5587 29 25.7956 29 25H31V20L28 16H25V12M18 14L22 18L18 22V19H12V17H18M25 17.5H27.5L29.47 20H25M14 23.5C14.3978 23.5 14.7794 23.658 15.0607 23.9393C15.342 24.2206 15.5 24.6022 15.5 25C15.5 25.3978 15.342 25.7794 15.0607 26.0607C14.7794 26.342 14.3978 26.5 14 26.5C13.6022 26.5 13.2206 26.342 12.9393 26.0607C12.658 25.7794 12.5 25.3978 12.5 25C12.5 24.6022 12.658 24.2206 12.9393 23.9393C13.2206 23.658 13.6022 23.5 14 23.5ZM26 23.5C26.3978 23.5 26.7794 23.658 27.0607 23.9393C27.342 24.2206 27.5 24.6022 27.5 25C27.5 25.3978 27.342 25.7794 27.0607 26.0607C26.7794 26.342 26.3978 26.5 26 26.5C25.6022 26.5 25.2206 26.342 24.9393 26.0607C24.658 25.7794 24.5 25.3978 24.5 25C24.5 24.6022 24.658 24.2206 24.9393 23.9393C25.2206 23.658 25.6022 23.5 26 23.5Z" fill="white" /></svg>');
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-title::before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.318 3.98203L12.3539 1.26797C12.2578 1.23516 12.1289 1.21875 12 1.21875C11.8711 1.21875 11.7422 1.23516 11.6461 1.26797L3.68203 3.98203C3.4875 4.04766 3.32812 4.27266 3.32812 4.47891V15.7852C3.32812 15.9914 3.46172 16.2633 3.62344 16.3922L11.7023 22.6875C11.7844 22.7508 11.8898 22.7836 11.9977 22.7836C12.1055 22.7836 12.2133 22.7508 12.293 22.6875L20.3719 16.3922C20.5336 16.2656 20.6672 15.9937 20.6672 15.7852V4.47891C20.6719 4.27266 20.5125 4.05 20.318 3.98203ZM16.2773 7.98516L11.2945 14.8453C11.2595 14.8933 11.2137 14.9323 11.1607 14.9591C11.1078 14.986 11.0492 15 10.9898 15C10.9305 15 10.8719 14.986 10.819 14.9591C10.766 14.9323 10.7202 14.8933 10.6852 14.8453L7.72266 10.7672C7.63359 10.643 7.72266 10.4695 7.875 10.4695H9.16875C9.28828 10.4695 9.40313 10.5281 9.47344 10.6242L10.9898 12.7102L14.5266 7.83984C14.5969 7.74375 14.7094 7.68516 14.8312 7.68516H16.125C16.2773 7.6875 16.3664 7.86094 16.2773 7.98516Z" fill="%23665E40"/></svg>');
+  }
+}
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-desc {
   width: 17em;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-desc {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-desc::before {
+  content: "Быстрая, безопасная и бесконтактная доставка по всей России!";
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-desc::before {
+    content: "‌ Гарантия ";
+  }
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(4) .mp_brick-desc::after {
+    content: "на время доставки!";
+  }
 }
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(5) {
   width: calc((100% - 24px) * 0.4161676647);
 }
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(5) .mp_brick-desc {
   width: 5em;
+}
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(5) .mp_brick-desc::before {
+  content: "разновидностей камней";
 }
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(5) .mp_brick-title {
   color: #5F4242;
@@ -1266,6 +1651,14 @@ footer .container .right-cont-col-link {
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(6) .mp_brick-desc {
   width: 15em;
 }
+#main-page_bricks .mp_bricks-cont .mp_brick:nth-child(6) .mp_brick-desc::before {
+  content: "положительных эффектов, которые в лучшую сторону изменят Вашу жизнь!";
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(6) .mp_brick-desc::before {
+    content: "положительных эффектов, которые изменят Вашу жизнь!";
+  }
+}
 #main-page_bricks .mp_bricks-cont .mp_brick:nth-child(6) .mp_brick-title {
   color: #46625C;
 }
@@ -1273,6 +1666,16 @@ footer .container .right-cont-col-link {
   margin-top: 40px;
   display: flex;
   gap: 12px;
+}
+@media (max-width: 600px) {
+  #main-page_bricks .mp_bricks-btns {
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  #main-page_bricks .mp_bricks-btns a {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 #main-page_categories .mp_categories-cont {
@@ -1294,13 +1697,29 @@ footer .container .right-cont-col-link {
   width: calc(50% - 6px);
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  #main-page_categories .mp_categories-cont .mp_category {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    justify-content: flex-start;
+    padding: 24px 16px;
+  }
+}
 #main-page_categories .mp_categories-cont .mp_category .mp_category-title {
   font-family: YesevaOne-Regular;
   line-height: 1.1em;
   font-size: 44px;
+  z-index: 5;
+}
+@media (max-width: 600px) {
+  #main-page_categories .mp_categories-cont .mp_category .mp_category-title {
+    font-size: 32px;
+  }
 }
 #main-page_categories .mp_categories-cont .mp_category .mp_category-desc {
   opacity: 0.5;
+  z-index: 5;
 }
 #main-page_categories .mp_categories-cont .mp_category:nth-child(1) {
   background-color: #3c4137;
@@ -1317,6 +1736,12 @@ footer .container .right-cont-col-link {
 #main-page_categories .mp_categories-cont .mp_category:nth-child(4) .mp_category-title {
   width: 5em;
 }
+@media (max-width: 600px) {
+  #main-page_categories .mp_categories-cont .mp_category:nth-child(4) .mp_category-title {
+    width: 7em;
+    max-width: 100%;
+  }
+}
 #main-page_categories .mp_categories-cont .mp_category:nth-child(4) .mp_category-desc {
   width: 8em;
 }
@@ -1332,6 +1757,11 @@ footer .container .right-cont-col-link {
 #main-page_contacts {
   margin-bottom: 40px;
 }
+@media (max-width: 600px) {
+  #main-page_contacts {
+    margin-bottom: 20px;
+  }
+}
 #main-page_contacts .mp_contacts-cont {
   height: 510px;
   width: 100%;
@@ -1345,17 +1775,35 @@ footer .container .right-cont-col-link {
   background-size: cover;
   background-position: center;
 }
+@media (max-width: 600px) {
+  #main-page_contacts .mp_contacts-cont {
+    padding: 16px;
+    background-image: url(../img/contacts-bg-mobile.png);
+  }
+}
 #main-page_contacts .mp_contacts-cont h2 {
   margin-bottom: 20px;
 }
 #main-page_contacts .mp_contacts-cont .main-btn {
   justify-self: flex-end;
 }
+@media (max-width: 600px) {
+  #main-page_contacts .mp_contacts-cont .main-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
 #main-page_contacts .mp_contacts-cont .mp_contacts-cont-line {
   margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 12px;
+}
+@media (max-width: 600px) {
+  #main-page_contacts .mp_contacts-cont .mp_contacts-cont-line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 #main-page_contacts .mp_contacts-cont .mp_contacts-cont-line .mp_contacts-desc {
   color: #413E37;
@@ -1766,13 +2214,51 @@ footer .container .right-cont-col-link {
 #cart-page .cp_cont {
   display: flex;
   gap: 50px;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  #cart-page .cp_cont {
+    flex-direction: column;
+    gap: 0;
+  }
 }
 #cart-page .cp_cont .cp_cards {
   width: calc(65% - 25px);
 }
+@media (max-width: 1000px) {
+  #cart-page .cp_cont .cp_cards {
+    width: 100%;
+  }
+}
 #cart-page .cp_cont .cp_prices {
   width: calc(35% - 25px);
   position: relative;
+}
+@media (max-width: 1000px) {
+  #cart-page .cp_cont .cp_prices {
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    padding: 40px 0;
+    background-color: #fff;
+  }
+  #cart-page .cp_cont .cp_prices::before {
+    position: absolute;
+    background-color: rgba(65, 62, 55, 0.2);
+    height: 1px;
+    content: "";
+    width: 100vw;
+    top: 0;
+    left: calc((100vw - 720px) * -1 / 2 - var(--bs-gutter-x) * 0.5);
+  }
+}
+@media (max-width: 600px) {
+  #cart-page .cp_cont .cp_prices {
+    padding: 20px 0;
+  }
+  #cart-page .cp_cont .cp_prices::before {
+    left: calc(var(--bs-gutter-x) * -0.5);
+  }
 }
 #cart-page .cp_cont .cp_prices > * {
   width: 100%;
@@ -1792,11 +2278,22 @@ footer .container .right-cont-col-link {
   background-color: #F6F3EC;
   padding: 20px;
 }
+@media (max-width: 1000px) {
+  #cart-page .cp_cont .cp_prices .cp_price-cont {
+    background-color: #fff;
+    padding: 0;
+  }
+}
 #cart-page .cp_cont .cp_prices .cp_price-cont .cp_price {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+@media (max-width: 1000px) {
+  #cart-page .cp_cont .cp_prices .cp_price-cont .cp_price {
+    margin-bottom: 12px;
+  }
 }
 #cart-page .cp_cont .cp_prices .cp_price-cont .cp_price .cp_price-title {
   font-size: 32px;
@@ -1838,11 +2335,23 @@ footer .container .right-cont-col-link {
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
+@media (max-width: 1000px) {
+  #cart-page .product-card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+}
 #cart-page .product-card .product-card-container {
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container {
+    align-items: flex-start;
+    gap: 12px;
+  }
 }
 #cart-page .product-card .product-card-container .product-content {
   display: flex;
@@ -1851,10 +2360,21 @@ footer .container .right-cont-col-link {
   justify-content: space-between;
   flex: 1 1 auto;
 }
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container .product-content {
+    flex-direction: row;
+  }
+}
 #cart-page .product-card .product-card-container .product-content-top {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container .product-content-top {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 #cart-page .product-card .product-card-container .product-content .delete-card-btn {
   margin-top: auto;
@@ -1863,9 +2383,23 @@ footer .container .right-cont-col-link {
   color: rgba(36, 36, 36, 0.4);
   gap: 8px;
 }
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container .product-content .delete-card-btn {
+    margin-top: 0;
+    align-items: flex-start;
+  }
+}
 #cart-page .product-card .product-card-container .product-content .delete-card-btn::before {
   content: url('data:image/svg+xml,<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.8546 3.35414C12.9011 3.30766 12.938 3.25247 12.9632 3.19173C12.9883 3.13099 13.0013 3.06589 13.0013 3.00014C13.0013 2.9344 12.9883 2.8693 12.9632 2.80856C12.938 2.74782 12.9011 2.69263 12.8546 2.64614C12.8081 2.59966 12.753 2.56278 12.6922 2.53762C12.6315 2.51246 12.5664 2.49951 12.5006 2.49951C12.4349 2.49951 12.3698 2.51246 12.309 2.53762C12.2483 2.56278 12.1931 2.59966 12.1466 2.64614L7.50063 7.29314L2.85463 2.64614C2.80814 2.59966 2.75295 2.56278 2.69221 2.53762C2.63148 2.51246 2.56638 2.49951 2.50063 2.49951C2.43489 2.49951 2.36979 2.51246 2.30905 2.53762C2.24831 2.56278 2.19312 2.59966 2.14663 2.64614C2.10014 2.69263 2.06327 2.74782 2.03811 2.80856C2.01295 2.8693 2 2.9344 2 3.00014C2 3.06589 2.01295 3.13099 2.03811 3.19173C2.06327 3.25247 2.10014 3.30766 2.14663 3.35414L6.79363 8.00014L2.14663 12.6461C2.05274 12.74 2 12.8674 2 13.0001C2 13.1329 2.05274 13.2603 2.14663 13.3541C2.24052 13.448 2.36786 13.5008 2.50063 13.5008C2.63341 13.5008 2.76075 13.448 2.85463 13.3541L7.50063 8.70714L12.1466 13.3541C12.2405 13.448 12.3679 13.5008 12.5006 13.5008C12.6334 13.5008 12.7607 13.448 12.8546 13.3541C12.9485 13.2603 13.0013 13.1329 13.0013 13.0001C13.0013 12.8674 12.9485 12.74 12.8546 12.6461L8.20763 8.00014L12.8546 3.35414Z" fill="%23242424" fill-opacity="0.4"/></svg>');
   margin-top: 1px;
+}
+#cart-page .product-card .product-card-container .product-content .delete-card-btn::after {
+  content: "Убрать из корзины";
+}
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container .product-content .delete-card-btn::after {
+    display: none;
+  }
 }
 #cart-page .product-card .product-card-container img {
   width: 220px;
@@ -1873,6 +2407,11 @@ footer .container .right-cont-col-link {
   aspect-ratio: 1;
   border-radius: 4px;
   object-fit: cover;
+}
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container img {
+    width: 95px;
+  }
 }
 #cart-page .product-card .product-card-container .product-info {
   display: flex;
@@ -1887,11 +2426,23 @@ footer .container .right-cont-col-link {
   border: 1px solid rgba(36, 36, 36, 0.2);
   padding: 4px;
 }
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container .product-counter {
+    padding-top: 6px;
+    margin-left: 0;
+  }
+}
 #cart-page .product-card .product-card-container .product-counter > * {
   width: 52px;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
+}
+@media (max-width: 600px) {
+  #cart-page .product-card .product-card-container .product-counter > * {
+    width: 27px;
+    height: 22px;
+  }
 }
 #cart-page .product-card .product-card-container .product-counter button {
   color: #000;
@@ -1904,7 +2455,7 @@ footer .container .right-cont-col-link {
 }
 @media (max-width: 600px) {
   #cart-page .product-card .product-card-container .product-counter button {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 #cart-page .product-card .product-card-container .product-counter button:disabled {

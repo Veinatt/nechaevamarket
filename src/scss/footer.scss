@@ -36,6 +36,7 @@ footer {
             display: flex;
             gap: 40px;
             align-items: flex-start;
+            justify-content: flex-end;
             @media (max-width: 1000px) {
                 gap: 20px;
             }
