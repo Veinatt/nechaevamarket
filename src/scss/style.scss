@@ -207,6 +207,7 @@ button:focus {
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
 }
 
 body {
@@ -351,7 +352,9 @@ h2 {
 		padding: 40px;
 		width: 100%;
 		position: relative;
-
+		@media (max-width: 600px) {
+			padding: 24px 12px;
+		}
 		.switchmodal {
 			margin-bottom: 20px;
 			padding-bottom: 20px;
@@ -372,7 +375,9 @@ h2 {
 			display: flex;
 			flex-wrap: wrap;
 			gap: 20px;
-
+			@media (max-width: 600px) {
+				gap: 12px;
+			}
 			button {
 				width: 100%;
 				line-height: 1.4em;
@@ -408,7 +413,11 @@ h2 {
 			outline: none !important;
 			color: $clr-main !important;
 			border: none !important;
-			box-shadow: none !important
+			box-shadow: none !important;
+			@media (max-width: 600px) {
+				right: 12px;
+				top: 24px;
+			}
 		}
 	}
 
@@ -420,13 +429,18 @@ h2 {
 			width: 100%;
 			position: relative;
 			color: #fff;
-
+			@media (max-width: 600px) {
+				padding: 24px 12px;
+			}
 			h2 {
 				color: #fff;
 				margin-bottom: 20px;
 				padding-bottom: 20px;
-				width: 100%;
+				width: calc(100% - 24px);
 				border-bottom: 1px solid rgba($color: #fff, $alpha: .1);
+				@media (max-width: 600px) {
+					font-size: 28px;
+				}
 			}
 
 			form {
@@ -589,12 +603,9 @@ h2 {
 	margin-bottom: 20px;
 
 	@media (max-width: 600px) {
-		margin-top: 100px;
-	}
-
-	@media (max-width: 380px) {
 		margin-top: 80px;
 	}
+
 
 	.bc-link {
 		@extend %text_body1;
@@ -652,7 +663,9 @@ main:has(#success-page) {
 #success-page {
 	margin-top: 70px;
 	width: 100%;
-
+	@media (max-width: 600px) {
+		margin-top: 60px;
+	}
 	.container {
 		height: 100%;
 		display: flex;
@@ -677,12 +690,9 @@ main:has(#success-page) {
 	margin-top: 110px;
 
 	@media (max-width: 600px) {
-		margin-top: 100px;
-	}
-
-	@media (max-width: 380px) {
 		margin-top: 80px;
 	}
+
 	h2 {
 		@media (max-width: 600px) {
 			font-size: 24px;

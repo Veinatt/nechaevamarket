@@ -257,6 +257,8 @@
 #CartForm {
     .default-form-field {
         width: calc(50% - 10px);
-
+        @media (max-width: 600px) {
+            width: 100%;
+        }
     }
 }

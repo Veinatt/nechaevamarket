@@ -36,8 +36,8 @@
                 </div>
                 <div class="mobile-header">
                     <div class="menu-links">
-                        <a href="#">Каталог</a>
-                        <a href="#">Контакты</a>
+                        <a href="#main-page_bricks">Каталог</a>
+                        <a href="#main-page_contacts">Контакты</a>
                         <a href="#">О нас</a>
                     </div>
                     <a href="tel:+79999999999" class="header-tel">
@@ -57,7 +57,7 @@
         </div>
     </header>
     <div class="modal fade default-modal" id="LoginForm" tabindex="-1" aria-labelledby="LoginLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="container">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -82,7 +82,7 @@
         </div>
     </div>
     <div class="modal fade default-modal" id="RegForm" tabindex="-1" aria-labelledby="RegLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="container">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -112,7 +112,7 @@
         </div>
     </div>
     <div class="modal fade default-modal" id="CheckForm" tabindex="-1" aria-labelledby="CheckLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="container">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -145,7 +145,7 @@
     </div>
     <div class="modal fade default-modal" id="TimeoutForm" tabindex="-1" aria-labelledby="TimeoutLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-md-down">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="container">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -169,53 +169,194 @@
 
 <main>
 
-    <section id="user-page">
-    <div class="container">
-        <div class="user-info">
-            <img src="img/card.png" alt="">
-            <div class="user-block">
-                <h2>Кирилл Дейкун</h2>
-                <div class="user-id-orders">
-                    <div class="pt-row">
-                        <div>ID: </div> 146
+    <div class="container cart-page">
+    <div id="breadcrumbs">
+    <a href="#" class="bc-link">Главная</a>
+    <a href="#" class="bc-link bc-active">Каталог</a>
+</div>
+    <section id="cart-page">
+        <h2>Корзина</h2>
+        <div class="cp_cont">
+            <div class="cp_cards">
+                <div class="product-card">
+    <div class="product-card-container">
+        <img class="product-img" src="img/card.png" alt="">
+        <div class="product-content">
+            <div class="product-content-top">
+                <div class="product-info">
+                    <div class="price-list">
+                        <div class="product-price">3 899 Р</div>
+                        <div class="product-old-price">5 899 Р</div>
+                        <div class="product-discount">-20%</div>
                     </div>
-                    <div class="pt-row">
-                        <div>Ваши заказы: </div> 36
+                    <div class="name-shop">
+                        <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
                     </div>
+                </div>
+                <div class="product-counter">
+                    <button class="decrement-btn" disabled>-</button>
+                    <div class="counter-value">1</div>
+                    <button class="increment-btn">+</button>
+                </div>
+            </div>
+            <button class="delete-card-btn"></button>
+        </div>
+    </div>
+</div>
+                <div class="product-card">
+    <div class="product-card-container">
+        <img class="product-img" src="img/card.png" alt="">
+        <div class="product-content">
+            <div class="product-content-top">
+                <div class="product-info">
+                    <div class="price-list">
+                        <div class="product-price">3 899 Р</div>
+                        <div class="product-old-price">5 899 Р</div>
+                        <div class="product-discount">-20%</div>
+                    </div>
+                    <div class="name-shop">
+                        <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+                    </div>
+                </div>
+                <div class="product-counter">
+                    <button class="decrement-btn" disabled>-</button>
+                    <div class="counter-value">1</div>
+                    <button class="increment-btn">+</button>
+                </div>
+            </div>
+            <button class="delete-card-btn"></button>
+        </div>
+    </div>
+</div>
+                <div class="product-card">
+    <div class="product-card-container">
+        <img class="product-img" src="img/card.png" alt="">
+        <div class="product-content">
+            <div class="product-content-top">
+                <div class="product-info">
+                    <div class="price-list">
+                        <div class="product-price">3 899 Р</div>
+                        <div class="product-old-price">5 899 Р</div>
+                        <div class="product-discount">-20%</div>
+                    </div>
+                    <div class="name-shop">
+                        <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+                    </div>
+                </div>
+                <div class="product-counter">
+                    <button class="decrement-btn" disabled>-</button>
+                    <div class="counter-value">1</div>
+                    <button class="increment-btn">+</button>
+                </div>
+            </div>
+            <button class="delete-card-btn"></button>
+        </div>
+    </div>
+</div>
+                <div class="product-card">
+    <div class="product-card-container">
+        <img class="product-img" src="img/card.png" alt="">
+        <div class="product-content">
+            <div class="product-content-top">
+                <div class="product-info">
+                    <div class="price-list">
+                        <div class="product-price">3 899 Р</div>
+                        <div class="product-old-price">5 899 Р</div>
+                        <div class="product-discount">-20%</div>
+                    </div>
+                    <div class="name-shop">
+                        <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+                    </div>
+                </div>
+                <div class="product-counter">
+                    <button class="decrement-btn" disabled>-</button>
+                    <div class="counter-value">1</div>
+                    <button class="increment-btn">+</button>
+                </div>
+            </div>
+            <button class="delete-card-btn"></button>
+        </div>
+    </div>
+</div>
+                <div class="product-card">
+    <div class="product-card-container">
+        <img class="product-img" src="img/card.png" alt="">
+        <div class="product-content">
+            <div class="product-content-top">
+                <div class="product-info">
+                    <div class="price-list">
+                        <div class="product-price">3 899 Р</div>
+                        <div class="product-old-price">5 899 Р</div>
+                        <div class="product-discount">-20%</div>
+                    </div>
+                    <div class="name-shop">
+                        <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+                    </div>
+                </div>
+                <div class="product-counter">
+                    <button class="decrement-btn" disabled>-</button>
+                    <div class="counter-value">1</div>
+                    <button class="increment-btn">+</button>
+                </div>
+            </div>
+            <button class="delete-card-btn"></button>
+        </div>
+    </div>
+</div>
+            </div>
+            <div class="cp_prices">
+                <div class="cp_prices-sticky">
+                    <div class="cp_price-cont">
+                        <div class="cp_price">
+                            <div class="cp_price-title">Сумма заказа</div>
+                            <div class="cp_price-num">1 020 000₽</div>
+                        </div>
+                        <div class="cp_discount">Скидка: 5000₽</div>
+                    </div>
+                    <button type="button" class="main-btn" data-bs-toggle="modal" data-bs-target="#CartForm">Оформить
+                        заказ</button>
                 </div>
             </div>
         </div>
-        <div class="user-form">
-            <form action="">
-                <div class="default-form-field">
-                    <label for="UserName">Ваше имя</label>
-                    <input type="text" placeholder="Кирилл" id="UserName">
-                </div>
-                <div class="default-form-field-gender">
-                    <label for="UserGender">Ваш пол</label>
-                    <input type="checkbox" id="toggleUserGender" class="toggleCheckbox" />
-                    <label for="toggleUserGender" class='toggleContainer'>
-                        <div>Мужской</div>
-                        <div>Женский</div>
-                    </label>
-                </div>
-                <div class="default-form-field">
-                    <label for="UserNumber">Номер телефона</label>
-                    <input type="tel" placeholder="+7 (999) 999-99-99" id="UserNumber">
-                </div>
-                <div class="default-form-field">
-                    <label for="UserDate">Дата рождения</label>
-                    <input type="date" placeholder="11.11.2000" id="UserDate">
-                </div>
-                <div class="default-form-field">
-                    <label for="UserMail">Ваш Email</label>
-                    <input type="email" placeholder="example@gmail.com" id=UserMail">
-                </div>
-                <button type="submit" class="main-btn">Сохранить</button>
-            </form>
+    </section>
+</div>
+<div class="modal fade default-modal" id="CartForm" tabindex="-1" aria-labelledby="CartLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="container">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h2>Оформление заказа</h2>
+                <form action="">
+                    <div class="default-form-field">
+                        <label for="CartName">Ваше имя</label>
+                        <input type="text" placeholder="Кирилл" id="CartName">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartDate">Дата рождения</label>
+                        <input type="date" placeholder="11.11.2000" id="CartDate">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartNumber">Номер телефона</label>
+                        <input type="tel" placeholder="+7 (999) 999-99-99" id="CartNumber">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartTime">Время рождения</label>
+                        <input type="time" placeholder="15:00" id="CartTime">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartTelegram">Ваш логин в Telegram</label>
+                        <input type="text" placeholder="@telegram" id="CartTelegram">
+                    </div>
+                    <div class="default-form-field">
+                        <label for="CartPlace">Место рождения</label>
+                        <input type="text" placeholder="Москва" id="CartPlace">
+                    </div>
+                    <button type="submit" class="main-btn">Оформить заказ</button>
+                </form>
+            </div>
         </div>
     </div>
-</section>
+</div>
 
 </main>
 

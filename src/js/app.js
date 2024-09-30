@@ -31,10 +31,10 @@ ready(function () {
   } else {
     document.querySelector('header').classList.remove('active');
   }
-  const TimeoutModal = new bootstrap.Modal('#CheckForm', {})
-  // setTimeout(() => {
-  //   TimeoutModal.show()
-  // }, 300);
+  const TimeoutModal = new bootstrap.Modal('#TimeoutForm', {})
+  setTimeout(() => {
+    TimeoutModal.show()
+  }, 300);
   const TimeoutModalEl = document.getElementById('CheckForm')
   TimeoutModalEl.addEventListener('show.bs.modal', event => {
     if (typeof localStorage.getItem("min") !== 'undefined' && typeof localStorage.getItem("sec") !== 'undefined' && localStorage.getItem("min") != null && localStorage.getItem("sec") != null) {
@@ -386,6 +386,17 @@ $(document).ready(function () {
   })
   $('.links a').click(function (event) {
     $('.burger, .mobile-header').removeClass('activebur');
+    $('body').removeClass('lock');
+  })
+});
+$(document).ready(function () {
+  $('.filters-mobile-cont').click(function (event) {
+    $('.filters-cont').addClass('activebur');
+    $('body').addClass('lock');
+  })
+  $('.filters-close').click(function (event) {
+    $('.filters-cont').removeClass('activebur');
+    $('.filters-cont .accordion.active').click();
     $('body').removeClass('lock');
   })
 });
