@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css?_v=20241023130603" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20241023130603" />
 
     <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.18/fullpage.min.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js"></script>
-    <link rel="stylesheet" href="css/style.min.css" />
+        href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.18/fullpage.min.css?_v=20241023130603" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css?_v=20241023130603" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css?_v=20241023130603" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe.umd.min.js?_v=20241023130603"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/umd/photoswipe-lightbox.umd.min.js?_v=20241023130603"></script>
+    <link rel="stylesheet" href="css/style.min.css?_v=20241023130603" />
     <title>Nechaeva</title>
 </head>
 
@@ -174,118 +174,213 @@
     <a href="#" class="bc-link">Главная</a>
     <a href="#" class="bc-link bc-active">Каталог</a>
 </div>
-    <section id="product-page_card">
-        <div id="pp_gallery" class="pswp-gallery">
-            <a href="img/card.png" data-pswp-width="957" data-pswp-height="1125" target="_blank">
-                <img src=" img/card.png" alt="">
-            </a>
-            <a href="img/card.png" data-pswp-width="957" data-pswp-height="1125"  target="_blank">
-                <img src="img/card.png" alt="">
-            </a>
-            <a href="img/card.png" data-pswp-width="957" data-pswp-height="1125" target="_blank">
-                <img src="img/card.png" alt="">
-            </a>
-            <a href="img/card.png" data-pswp-width="957" data-pswp-height="1125"  target="_blank">
-                <img src="img/card.png" alt="">
-            </a>
-        </div>
-        <div class="pp_info">
-            <div class="product-article">9242-130-IF-Q </div>
-            <h2>Браслет двойное вдохновение</h2>
-            <div class="price-list">
-                <div class="product-price">3 899 Р</div>
-                <div class="product-old-price">5 899 Р</div>
-                <div class="product-discount">-20%</div>
+    <section id="catalog-page">
+        <h2>Каталог</h2>
+        <div class="catalog-cont">
+            <button class="filters-mobile-cont main-btn outline-btn">Фильтры</button>
+            <div class="filters-cont">
+                <div class="mobile-title">
+                    <h2>Фильтры</h2>
+                    <button type="button" class="filters-close"></button>
+                </div>
+                <div class="filter-block custom-price">
+                    <button class="accordion">Цена</button>
+                    <div class="panel">
+                        <div class="price-input">
+                            <div class="field">
+                                <input type="number" class="input-min" value="2500">
+                            </div>
+                            <div class="field">
+                                <input type="number" class="input-max" value="7500">
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="progress"></div>
+                        </div>
+                        <div class="range-input">
+                            <input type="range" class="range-min" min="0" max="10000" value="2500" step="50">
+                            <input type="range" class="range-max" min="0" max="10000" value="7500" step="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-block">
+                    <button class="accordion">Категория</button>
+                    <div class="panel">
+                        <label class="custom-checkbox">Браслеты
+                            <input type="checkbox" checked="checked" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Кулоны
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Серьги
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-block">
+                    <button class="accordion">Категория</button>
+                    <div class="panel">
+                        <label class="custom-checkbox">Браслеты
+                            <input type="checkbox" checked="checked" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Кулоны
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Серьги
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-block">
+                    <button class="accordion">Категория</button>
+                    <div class="panel">
+                        <label class="custom-checkbox">Браслеты
+                            <input type="checkbox" checked="checked" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Кулоны
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Серьги
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="filter-block">
+                    <button class="accordion">Категория</button>
+                    <div class="panel">
+                        <label class="custom-checkbox">Браслеты
+                            <input type="checkbox" checked="checked" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Кулоны
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="custom-checkbox">Серьги
+                            <input type="checkbox" name="category">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="btns-sticky-cont">
+                    <button class="main-btn">Искать</button>
+                    <button class="main-btn outline-btn">Сбросить</button>
+                </div>
             </div>
-            <div class="product-desc">Лимитированная модель часов - отличный подарок для поклонников уникальных
-                аксессуаров. 5 Sports SKX. Лимитированная серия - 7500 экземпляров.</div>
-            <div class="product-tags-cont">
-                <div class="pt-row">
-                    <div>Категории:</div><a href="#">Браслеты</a>, <a href="#">Мужские</a>
+            <div class="cards-cont">
+                <div class="sort-block">
+                    <div>Сортировать по:</div>
+                    <select class="select" name="language">
+                        <option value="increase">возрастанию</option>
+                        <option value="decrease">убыванию</option>
+                    </select>
                 </div>
-                <div class="pt-row">
-                    <div>Метки:</div><a href="#">Натуральная кожа</a>, <a href="#">Хрусталь</a>, <a href="#">Сталь</a>
+                <div class="cards-block">
+                    <a href="#" class="product-card">
+    <div class="product-card-container">
+        <picture><source srcset="img/card.webp" type="image/webp"><img class="product-img" src="img/card.png" alt=""></picture>
+        <div class="price-list">
+            <div class="product-price">3 899 Р</div>
+            <div class="product-old-price">5 899 Р</div>
+            <div class="product-discount">-20%</div>
+        </div>
+        <div class="name-shop">
+            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+            <button class="product-shop"></button>
+        </div>
+    </div>
+</a>
+                    <a href="#" class="product-card">
+    <div class="product-card-container">
+        <picture><source srcset="img/card.webp" type="image/webp"><img class="product-img" src="img/card.png" alt=""></picture>
+        <div class="price-list">
+            <div class="product-price">3 899 Р</div>
+            <div class="product-old-price">5 899 Р</div>
+            <div class="product-discount">-20%</div>
+        </div>
+        <div class="name-shop">
+            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+            <button class="product-shop"></button>
+        </div>
+    </div>
+</a>
+                    <a href="#" class="product-card">
+    <div class="product-card-container">
+        <picture><source srcset="img/card.webp" type="image/webp"><img class="product-img" src="img/card.png" alt=""></picture>
+        <div class="price-list">
+            <div class="product-price">3 899 Р</div>
+            <div class="product-old-price">5 899 Р</div>
+            <div class="product-discount">-20%</div>
+        </div>
+        <div class="name-shop">
+            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+            <button class="product-shop"></button>
+        </div>
+    </div>
+</a>
+                    <a href="#" class="product-card">
+    <div class="product-card-container">
+        <picture><source srcset="img/card.webp" type="image/webp"><img class="product-img" src="img/card.png" alt=""></picture>
+        <div class="price-list">
+            <div class="product-price">3 899 Р</div>
+            <div class="product-old-price">5 899 Р</div>
+            <div class="product-discount">-20%</div>
+        </div>
+        <div class="name-shop">
+            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+            <button class="product-shop"></button>
+        </div>
+    </div>
+</a>
+                    <a href="#" class="product-card">
+    <div class="product-card-container">
+        <picture><source srcset="img/card.webp" type="image/webp"><img class="product-img" src="img/card.png" alt=""></picture>
+        <div class="price-list">
+            <div class="product-price">3 899 Р</div>
+            <div class="product-old-price">5 899 Р</div>
+            <div class="product-discount">-20%</div>
+        </div>
+        <div class="name-shop">
+            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+            <button class="product-shop"></button>
+        </div>
+    </div>
+</a>
+                    <a href="#" class="product-card">
+    <div class="product-card-container">
+        <picture><source srcset="img/card.webp" type="image/webp"><img class="product-img" src="img/card.png" alt=""></picture>
+        <div class="price-list">
+            <div class="product-price">3 899 Р</div>
+            <div class="product-old-price">5 899 Р</div>
+            <div class="product-discount">-20%</div>
+        </div>
+        <div class="name-shop">
+            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
+            <button class="product-shop"></button>
+        </div>
+    </div>
+</a>
+                </div>
+                <button class="more-block main-btn outline-btn">
+                    Показать ещё
+                </button>
+                <div class="pagination-block">
+                    <button class="main-btn outline-btn active">1</button>
+                    <button class="main-btn outline-btn">2</button>
+                    <button class="main-btn outline-btn">3</button>
+                    <button class="main-btn outline-btn">4</button>
+                    <button class="main-btn outline-btn">5</button>
                 </div>
             </div>
-            <div class="product-details-cont">
-                <div class="pt-row">
-                    <div>Вес:</div> 80 грамм
-                </div>
-                <div class="pt-row">
-                    <div>Замок:</div> Защелка
-                </div>
-                <div class="pt-row">
-                    <div>Габариты:</div> 10 х 10 х 3 см
-                </div>
-                <div class="pt-row">
-                    <div>Камень:</div> Хрусталь
-                </div>
-                <div class="pt-row">
-                    <div>Материал:</div> Натуральная кожа, нержавеющая сталь
-                </div>
-            </div>
-            <button class="main-btn">В корзину</button>
-        </div>
-    </section>
-    <section id="product-page_recommend">
-        <h2>Рекомендуем к этому товару</h2>
-        <div class="pp_recommend-cards">
-            <a href="#" class="product-card">
-    <div class="product-card-container">
-        <img class="product-img" src="img/card.png" alt="">
-        <div class="price-list">
-            <div class="product-price">3 899 Р</div>
-            <div class="product-old-price">5 899 Р</div>
-            <div class="product-discount">-20%</div>
-        </div>
-        <div class="name-shop">
-            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
-            <button class="product-shop"></button>
-        </div>
-    </div>
-</a>
-            <a href="#" class="product-card">
-    <div class="product-card-container">
-        <img class="product-img" src="img/card.png" alt="">
-        <div class="price-list">
-            <div class="product-price">3 899 Р</div>
-            <div class="product-old-price">5 899 Р</div>
-            <div class="product-discount">-20%</div>
-        </div>
-        <div class="name-shop">
-            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
-            <button class="product-shop"></button>
-        </div>
-    </div>
-</a>
-            <a href="#" class="product-card">
-    <div class="product-card-container">
-        <img class="product-img" src="img/card.png" alt="">
-        <div class="price-list">
-            <div class="product-price">3 899 Р</div>
-            <div class="product-old-price">5 899 Р</div>
-            <div class="product-discount">-20%</div>
-        </div>
-        <div class="name-shop">
-            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
-            <button class="product-shop"></button>
-        </div>
-    </div>
-</a>
-            <a href="#" class="product-card">
-    <div class="product-card-container">
-        <img class="product-img" src="img/card.png" alt="">
-        <div class="price-list">
-            <div class="product-price">3 899 Р</div>
-            <div class="product-old-price">5 899 Р</div>
-            <div class="product-discount">-20%</div>
-        </div>
-        <div class="name-shop">
-            <div class="product-name">Браслет “Cила волка” <br> Черный авантюрин</div>
-            <button class="product-shop"></button>
-        </div>
-    </div>
-</a>
         </div>
     </section>
 </div>
@@ -322,15 +417,15 @@
         </div>
     </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20241023130603"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js?_v=20241023130603"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
 </script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js?_v=20241023130603"></script>
 <script>
 </script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20241023130603" type="module"></script>
 <script>
 
     var lightbox = new PhotoSwipeLightbox({
@@ -342,15 +437,15 @@
       lightbox.init();
 </script>
 
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js?_v=20241023130603"
 integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg=="
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js?_v=20241023130603"
 integrity="sha512-5/OHwmQzDSBS0Ous4/hlYoWLHd06/d2r7LdKZQVBXOA6PvOqWVXtdboiLTU7lQTGyVoKVTNkwi0ol4gHGlw5ww=="
 crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" crossorigin="anonymous"
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js?_v=20241023130603" crossorigin="anonymous"
 referrerpolicy="no-referrer"></script> -->
-<script src="js/app.min.js"></script>
-<script src="files/form.js"></script>
+<script src="js/app.min.js?_v=20241023130603"></script>
+<script src="files/form.js?_v=20241023130603"></script>
 </body>
 </html>

@@ -36,6 +36,9 @@
                 height: 20px;
             }
         }
+        @media (min-width:1000px) {
+            display: none;
+        }
     }
 
     .filters-cont {
